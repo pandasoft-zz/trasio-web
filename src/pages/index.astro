@@ -1,0 +1,35 @@
+---
+// The root page only picks a language. A script sends the browser to the
+// first language it prefers; without a script, meta refresh goes to Czech.
+import { defaultLocale, localeNames, locales, type Locale } from '../i18n/ui';
+---
+
+<!doctype html>
+<html lang={defaultLocale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trasio</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href={new URL(`/${defaultLocale}/`, Astro.site)} />
+    <script is:inline define:vars={{ locales, defaultLocale }}>
+      const wanted = (navigator.languages || [navigator.language]).map((l) => l.slice(0, 2).toLowerCase());
+      const lang = wanted.find((l) => locales.includes(l)) || defaultLocale;
+      location.replace('/' + lang + '/');
+    </script>
+    <noscript><meta http-equiv="refresh" content={`0; url=/${defaultLocale}/`} /></noscript>
+  </head>
+  <body>
+    <ul>
+      {
+        (locales as Locale[]).map((l) => (
+          <li>
+            <a href={`/${l}/`} hreflang={l}>
+              {localeNames[l]}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,381 @@
+---
+import { Image } from 'astro:assets';
+import Route from '@lucide/astro/icons/route';
+import CalendarOff from '@lucide/astro/icons/calendar-off';
+import MapIcon from '@lucide/astro/icons/map';
+import MapPin from '@lucide/astro/icons/map-pin';
+import Activity from '@lucide/astro/icons/activity';
+import EyeOff from '@lucide/astro/icons/eye-off';
+import ArrowRight from '@lucide/astro/icons/arrow-right';
+import Base from '../../layouts/Base.astro';
+import JourneyBar from '../../components/JourneyBar.astro';
+import { APP_URL, langPaths, localePath, useTranslations, type Locale } from '../../i18n/ui';
+import webConnections from '../../assets/screens/web-connections.jpg';
+import webMap from '../../assets/screens/web-map.jpg';
+import tripDetail from '../../assets/screens/design-trip-detail.jpg';
+import stagePoints from '../../assets/screens/design-stage-points.png';
+import mobileConnections from '../../assets/screens/mobile-connections.png';
+import androidPlace from '../../assets/screens/design-android-place.png';
+
+export const getStaticPaths = langPaths;
+
+const lang = Astro.params.lang as Locale;
+const t = useTranslations(lang);
+
+const features = [
+  { icon: Route, key: 'connections' },
+  { icon: CalendarOff, key: 'plans' },
+  { icon: MapIcon, key: 'map' },
+  { icon: MapPin, key: 'places' },
+  { icon: Activity, key: 'record' },
+  { icon: EyeOff, key: 'share' },
+] as const;
+
+const steps = [1, 2, 3] as const;
+---
+
+<Base lang={lang} title={t('home.title')}>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="eyebrow">{t('home.hero.eyebrow')}</span>
+        <h1>{t('home.hero.title')}</h1>
+        <p class="lead">{t('home.hero.lead')}</p>
+        <div class="actions">
+          <a class="btn btn-primary" href={APP_URL}>{t('home.hero.cta')} <ArrowRight size={18} aria-hidden="true" /></a>
+          <a class="btn btn-ghost" href="#how">{t('home.hero.secondary')}</a>
+        </div>
+        <p class="note">{t('home.hero.note')}</p>
+        <JourneyBar />
+      </div>
+      <div class="hero-shot">
+        <Image
+          src={webConnections}
+          alt={t('home.hero.alt')}
+          widths={[640, 960, 1440, 2000]}
+          sizes="(max-width: 960px) 100vw, 640px"
+          class="shot"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-head">
+        <h2>{t('home.features.title')}</h2>
+        <p class="lead">{t('home.features.lead')}</p>
+      </div>
+      <ul class="features">
+        {
+          features.map(({ icon: Icon, key }) => (
+            <li class="card feature">
+              <span class="feature-icon">
+                <Icon size={22} aria-hidden="true" />
+              </span>
+              <h3>{t(`home.f.${key}.title`)}</h3>
+              <p>{t(`home.f.${key}.text`)}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section steps-section" id="how">
+    <div class="container">
+      <div class="section-head">
+        <h2>{t('home.steps.title')}</h2>
+      </div>
+      <ol class="steps">
+        {
+          steps.map((n) => (
+            <li>
+              <span class="step-no">{n}</span>
+              <h3>{t(`home.step${n}.title`)}</h3>
+              <p>{t(`home.step${n}.text`)}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container showcase">
+      <div class="showcase-row">
+        <div>
+          <h2>{t('home.showcase.map.title')}</h2>
+          <p class="lead">{t('home.showcase.map.text')}</p>
+        </div>
+        <Image src={webMap} alt={t('home.showcase.map.alt')} widths={[640, 1280, 2000]} sizes="(max-width: 960px) 100vw, 680px" class="shot" />
+      </div>
+      <div class="showcase-row reverse">
+        <div>
+          <h2>{t('home.showcase.plan.title')}</h2>
+          <p class="lead">{t('home.showcase.plan.text')}</p>
+        </div>
+        <Image src={tripDetail} alt={t('home.showcase.plan.alt')} widths={[640, 925]} sizes="(max-width: 960px) 100vw, 680px" class="shot" />
+      </div>
+      <div class="showcase-row">
+        <div>
+          <h2>{t('home.showcase.points.title')}</h2>
+          <p class="lead">{t('home.showcase.points.text')}</p>
+        </div>
+        <Image src={stagePoints} alt={t('home.showcase.points.alt')} widths={[420, 810]} sizes="(max-width: 960px) 90vw, 420px" class="shot narrow" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section mobile">
+    <div class="container mobile-grid">
+      <div>
+        <span class="badge">{t('home.mobile.badge')}</span>
+        <h2>{t('home.mobile.title')}</h2>
+        <p class="lead">{t('home.mobile.text')}</p>
+      </div>
+      <div class="phones">
+        <Image src={mobileConnections} alt={t('home.mobile.altWeb')} widths={[280, 560]} sizes="280px" class="phone" />
+        <Image src={androidPlace} alt={t('home.mobile.altApp')} widths={[280, 560]} sizes="280px" class="phone" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container open card">
+      <div>
+        <h2>{t('home.open.title')}</h2>
+        <p>{t('home.open.text')}</p>
+      </div>
+      <a class="btn btn-ghost" href={localePath(lang, 'licenses/')}>{t('home.open.link')}</a>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>{t('home.cta.title')}</h2>
+      <p>{t('home.cta.text')}</p>
+      <a class="btn btn-primary" href={APP_URL}>{t('home.hero.cta')} <ArrowRight size={18} aria-hidden="true" /></a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    background: var(--color-forest);
+    color: var(--color-on-forest);
+    padding: 56px 0 80px;
+    overflow: hidden;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: 48px;
+    align-items: center;
+  }
+
+  .hero h1 {
+    color: #fff;
+  }
+
+  .hero .lead {
+    color: var(--color-forest-text);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 28px 0 12px;
+  }
+
+  .note {
+    font-size: 0.9rem;
+    color: var(--color-forest-text);
+    opacity: 0.85;
+  }
+
+  .hero-shot :global(img) {
+    border-color: var(--color-forest-active);
+  }
+
+  .features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .feature {
+    padding: 24px;
+  }
+
+  .feature p {
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  .feature-icon {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    margin-bottom: 14px;
+  }
+
+  .steps-section {
+    background: var(--color-primary-light);
+  }
+
+  .steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .steps p {
+    color: var(--color-text-secondary);
+  }
+
+  .step-no {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--color-accent);
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 800;
+    margin-bottom: 12px;
+    box-shadow: 0 0 0 4px #fff;
+  }
+
+  .showcase {
+    display: grid;
+    gap: clamp(56px, 8vw, 96px);
+  }
+
+  .showcase-row {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: 48px;
+    align-items: center;
+  }
+
+  .showcase-row.reverse > div {
+    order: 2;
+  }
+
+  .showcase-row :global(.narrow) {
+    width: 100%;
+    max-width: 420px;
+    justify-self: center;
+  }
+
+  .mobile {
+    background: var(--color-forest);
+    color: var(--color-on-forest);
+  }
+
+  .mobile h2 {
+    color: #fff;
+  }
+
+  .mobile .lead {
+    color: var(--color-forest-text);
+  }
+
+  .mobile-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 48px;
+    align-items: center;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: var(--radius-pill);
+    background: var(--color-forest-active);
+    color: var(--color-on-forest);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .phones {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .phones :global(.phone) {
+    width: min(260px, 45%);
+    border-radius: 28px;
+    border: 6px solid #0d1a12;
+    box-shadow: var(--shadow-float);
+    background: #fff;
+  }
+
+  .phones :global(.phone:nth-child(2)) {
+    margin-top: 48px;
+  }
+
+  .open {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 32px;
+  }
+
+  .open p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    max-width: 60ch;
+  }
+
+  .open .btn {
+    color: var(--color-primary);
+  }
+
+  .cta {
+    text-align: center;
+    padding: 0 0 clamp(56px, 8vw, 96px);
+  }
+
+  .cta p {
+    color: var(--color-text-secondary);
+  }
+
+  @media (max-width: 960px) {
+    .hero-grid,
+    .showcase-row,
+    .mobile-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .showcase-row.reverse > div {
+      order: 0;
+    }
+
+    .steps {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

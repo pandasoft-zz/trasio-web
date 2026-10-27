@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+import { defaultLocale, localePath, useTranslations, type Locale } from '../i18n/ui';
+
+// One 404 page for the whole site, in the default language.
+const lang = defaultLocale as Locale;
+const t = useTranslations(lang);
+---
+
+<Base lang={lang} title={`${t('notFound.title')} · Trasio`}>
+  <div class="container page-head missing">
+    <h1>{t('notFound.title')}</h1>
+    <p class="lead">{t('notFound.text')}</p>
+    <p><a class="btn btn-primary" href={localePath(lang)}>{t('notFound.home')}</a></p>
+    <p><a href={localePath('en')}>English</a></p>
+  </div>
+</Base>
+
+<style>
+  .missing {
+    padding-bottom: 120px;
+  }
+</style>

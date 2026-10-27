@@ -1,0 +1,108 @@
+---
+import Base from '../../layouts/Base.astro';
+import { data, fonts, software, type LicenseItem } from '../../data/licenses';
+import { langPaths, useTranslations, type Locale } from '../../i18n/ui';
+
+export const getStaticPaths = langPaths;
+
+const lang = Astro.params.lang as Locale;
+const t = useTranslations(lang);
+const groups: { title: string; items: LicenseItem[] }[] = [
+  { title: t('licenses.data'), items: data },
+  { title: t('licenses.software'), items: software },
+  { title: t('licenses.fonts'), items: fonts },
+];
+---
+
+<Base lang={lang} title={`${t('licenses.title')} · Trasio`} description={t('licenses.lead')}>
+  <div class="container page-head">
+    <h1>{t('licenses.title')}</h1>
+    <p class="lead">{t('licenses.lead')}</p>
+  </div>
+  <div class="container body">
+    {
+      groups.map((g) => (
+        <section>
+          <h2>{g.title}</h2>
+          <div class="card table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">{t('licenses.name')}</th>
+                  <th scope="col">{t('licenses.use')}</th>
+                  <th scope="col">{t('licenses.license')}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {g.items.map((item) => (
+                  <tr>
+                    <td>
+                      <a href={item.url}>{item.name}</a>
+                    </td>
+                    <td>{item.use[lang]}</td>
+                    <td>{item.licenseUrl ? <a href={item.licenseUrl}>{item.license}</a> : item.license}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      ))
+    }
+  </div>
+</Base>
+
+<style>
+  .body {
+    padding-bottom: 96px;
+  }
+
+  section {
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+
+  th,
+  td {
+    text-align: left;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: 0;
+  }
+
+  th {
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    font-weight: 600;
+  }
+
+  td:first-child {
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 640px) {
+    td:first-child {
+      white-space: normal;
+    }
+  }
+</style>

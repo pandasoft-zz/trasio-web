@@ -1,0 +1,74 @@
+---
+// The proportional journey bar of the app: walking legs are hatched, rides
+// have the color of their mode. Only a picture, so it is hidden from
+// screen readers.
+const legs = [
+  { kind: 'walk', grow: 4 },
+  { kind: 'train', grow: 36, label: 'S3' },
+  { kind: 'walk', grow: 2 },
+  { kind: 'bus', grow: 19, label: '335' },
+  { kind: 'walk', grow: 11 },
+];
+---
+
+<div class="journey" aria-hidden="true">
+  <div class="times"><span>10:49</span><span>12:06</span></div>
+  <div class="bar">
+    {legs.map((leg) => <span class:list={['leg', leg.kind]} style={`flex-grow: ${leg.grow}`}>{leg.label}</span>)}
+  </div>
+</div>
+
+<style>
+  .journey {
+    margin-top: 32px;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--color-forest-active);
+    border-radius: var(--radius-lg);
+    padding: 14px 16px;
+  }
+
+  .times {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .bar {
+    display: flex;
+    gap: 3px;
+    height: 24px;
+  }
+
+  .leg {
+    flex-basis: 0;
+    min-width: 10px;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .walk {
+    background: repeating-linear-gradient(
+      -45deg,
+      var(--color-walk-hatch) 0 4px,
+      var(--color-primary) 4px 6px
+    );
+  }
+
+  .train {
+    background: var(--color-mode-train);
+    border: 1px solid var(--color-forest-active);
+  }
+
+  .bus {
+    background: var(--color-mode-bus);
+  }
+</style>

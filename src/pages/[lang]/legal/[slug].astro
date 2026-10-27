@@ -1,0 +1,50 @@
+---
+import { render } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import { entriesIn, splitId } from '../../../i18n/content';
+import { locales, useTranslations, type Locale } from '../../../i18n/ui';
+
+export async function getStaticPaths() {
+  const perLang = await Promise.all(
+    (locales as Locale[]).map(async (lang) =>
+      (await entriesIn('legal', lang)).map((entry) => ({
+        params: { lang, slug: splitId(entry.id).slug },
+        props: { entry },
+      })),
+    ),
+  );
+  return perLang.flat();
+}
+
+const { entry } = Astro.props;
+const lang = Astro.params.lang as Locale;
+const t = useTranslations(lang);
+const { Content } = await render(entry);
+---
+
+<Base lang={lang} title={`${entry.data.title} · Trasio`} description={entry.data.description}>
+  <div class="container page-head">
+    <h1>{entry.data.title}</h1>
+    <p class="meta">{t('legal.updated')}: {entry.data.validFrom}</p>
+  </div>
+  <div class="container body">
+    {entry.data.draft && <p class="notice" role="note">{t('legal.draft')}</p>}
+    <article class="prose">
+      <Content />
+    </article>
+  </div>
+</Base>
+
+<style>
+  .meta {
+    color: var(--color-muted);
+  }
+
+  .body {
+    padding-bottom: 96px;
+  }
+
+  .notice {
+    max-width: 72ch;
+  }
+</style>

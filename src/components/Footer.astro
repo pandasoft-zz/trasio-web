@@ -1,0 +1,115 @@
+---
+import icon from '../assets/brand/trasio-icon.svg';
+import { APP_URL, localePath, useTranslations, type Locale } from '../i18n/ui';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container grid">
+    <div class="about">
+      <img src={icon.src} width="48" height="48" alt="" />
+      <p>{t('site.description')}</p>
+    </div>
+    <nav aria-label={t('footer.product')}>
+      <h2>{t('footer.product')}</h2>
+      <ul>
+        <li><a href={APP_URL}>{t('nav.open')}</a></li>
+        <li><a href={localePath(lang, '#features')}>{t('nav.features')}</a></li>
+        <li><a href={localePath(lang, 'guide/')}>{t('nav.guide')}</a></li>
+      </ul>
+    </nav>
+    <nav aria-label={t('footer.legal')}>
+      <h2>{t('footer.legal')}</h2>
+      <ul>
+        <li><a href={localePath(lang, 'legal/terms/')}>{t('footer.terms')}</a></li>
+        <li><a href={localePath(lang, 'legal/privacy/')}>{t('footer.privacy')}</a></li>
+        <li><a href={localePath(lang, 'legal/cookies/')}>{t('footer.cookies')}</a></li>
+        <li><a href={localePath(lang, 'licenses/')}>{t('footer.licenses')}</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container bottom">
+    <span>© {year} {t('footer.rights')}</span>
+    <a href="https://www.openstreetmap.org/copyright">{t('footer.mapData')}</a>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--color-forest);
+    color: var(--color-forest-text);
+    padding: 56px 0 24px;
+    font-size: 0.95rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  .about img {
+    border-radius: var(--radius-md);
+    margin-bottom: 16px;
+  }
+
+  .about p {
+    max-width: 40ch;
+  }
+
+  h2 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-on-forest);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  a {
+    color: var(--color-forest-text);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-forest-active);
+    font-size: 0.85rem;
+    opacity: 0.85;
+  }
+
+  @media (max-width: 720px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .about {
+      grid-column: 1 / -1;
+    }
+  }
+</style>

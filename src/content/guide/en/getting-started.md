@@ -1,0 +1,40 @@
+---
+title: Getting started
+description: What Trasio is, where to find it and what you need.
+order: 1
+---
+
+Trasio is a trip planner for people who go hiking by train and bus.
+It finds journeys, helps you plan the route and keeps the trips you walked.
+
+The app is in Czech for now. This guide uses the Czech names of buttons and
+screens, with a translation.
+
+## Where to find Trasio
+
+- **Web:** [app.gotrasio.cz](https://app.gotrasio.cz) — works on a computer and on a phone.
+- **Android:** the app is in progress. It will also work without signal.
+
+## Without an account
+
+Without an account you can:
+
+- search for journeys,
+- look at the map, stops and places,
+- open a trip that someone sent you as a link.
+
+## With an account
+
+After you sign in you can save plans and trips, upload tracks, rate places
+and share trips. Sign in with **Přihlásit se** (Sign in) at the bottom left
+(on a phone in the bottom bar).
+
+## Main parts of the app
+
+| Part | What it is for |
+|---|---|
+| **Mapa** (Map) | Your trips, places and stops on the map. New trips start here. |
+| **Výlety** (Trips) | List of trips: New, Walked, Archive. |
+| **Místa** (Places) | List of places with ratings, and the places you visited. |
+| **Spojení** (Journeys) | Public transport journey search. |
+| **Profil** (Profile) | Settings, home point, preferred trip day. |
