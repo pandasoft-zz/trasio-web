@@ -1,7 +1,7 @@
 ---
 title: Journey search
 description: How to find a journey with a sensible walk to the stop.
-order: 2
+order: 4
 ---
 
 ![Journey search from Brno to Pernštejn castle](../../../assets/screens/web-connections.jpg)

@@ -18,7 +18,7 @@ export const localeNames: Record<Locale, string> = {
  */
 const cs = {
   'site.description':
-    'Trasio — plánuj výlety pěšky i vlakem a autobusem. Spojení s limitem pěší docházky, plány, záznamy a mapa míst.',
+    'Trasio — plánuj výlety na jeden i více dní, s poznámkami, místy po cestě a spojením tam i zpět. Sbírej navštívená místa.',
   'site.tagline': 'plánuji · archivuji · sdílej',
   'nav.features': 'Co umí',
   'nav.guide': 'Návod',
@@ -35,64 +35,77 @@ const cs = {
   'footer.mapData': 'Mapová data © přispěvatelé OpenStreetMap',
   'footer.rights': 'Trasio',
 
-  'home.title': 'Trasio — výlety pěšky i veřejnou dopravou',
+  'home.title': 'Trasio — plánování výletů',
   'home.hero.eyebrow': 'Plánovač výletů pro Česko',
-  'home.hero.title': 'Na výlet vlakem a pěšky. Bez auta, bez stresu.',
+  'home.hero.title': 'Naplánuj si celý výlet. I na víc dní.',
   'home.hero.lead':
-    'Trasio najde spojení, ke kterému dojdeš. Nastavíš, kolik chceš jít pěšky, a Trasio hledá zastávky v tomto okruhu. Výlet si naplánuješ, projdeš a uložíš.',
+    'V Trasiu poskládáš výlet na jeden den i na celý týden: trasu po dnech a etapách, poznámky k bodům, místa po cestě a spojení tam i zpět. Pak ho projdeš a uložíš do archivu.',
   'home.hero.cta': 'Otevřít Trasio',
-  'home.hero.secondary': 'Jak to funguje',
-  'home.hero.note': 'Zdarma, ve webovém prohlížeči. Aplikace pro Android se připravuje.',
-  'home.hero.alt': 'Trasio: spojení z Brna na hrad Pernštejn s pěšími úseky a mapou',
+  'home.hero.secondary': 'Co Trasio umí',
+  'home.hero.note': 'Zdarma na webu a v aplikaci pro Android.',
+  'home.hero.alt': 'Turistická mapa Trasia s trasami a zastávkami v okolí Brna',
 
-  'home.features.title': 'Co Trasio umí',
-  'home.features.lead': 'Jedno místo pro celý výlet: od nápadu, přes spojení, až po záznam trasy.',
-  'home.f.connections.title': 'Spojení s limitem chůze',
-  'home.f.connections.text':
-    'Hledá vlaky, autobusy a tramvaje v celém Česku. Ke každému spojení vidíš pěší úseky. Kolik půjdeš pěšky, určuješ ty.',
-  'home.f.plans.title': 'Plány bez data',
-  'home.f.plans.text':
-    'Plán je šablona výletu: etapy, body, poznámky a doprava tam i zpět. Datum dostane až výlet, který opravdu projdeš.',
-  'home.f.map.title': 'Turistická mapa',
-  'home.f.map.text':
-    'Vlastní mapa s reliéfem, vrstevnicemi, turistickými a cyklo trasami. Zastávky a místa přímo v mapě.',
-  'home.f.places.title': 'Místa a hodnocení',
-  'home.f.places.text':
-    'Hrady, rozhledny, jeskyně, restaurace. Označ, co chceš navštívit a kde už jsi byl, a dej hodnocení.',
-  'home.f.record.title': 'Záznam a archiv',
-  'home.f.record.text':
-    'Nahraj GPX nebo KML z hodinek. Porovnej plán se skutečnou trasou a výškovým profilem.',
-  'home.f.share.title': 'Sdílení se soukromím',
-  'home.f.share.text':
-    'Sdílej výlet odkazem ke čtení nebo k úpravám. Začátek a konec trasy můžeš před ostatními skrýt.',
+  'home.pillars.title': 'Tři věci, jedno místo',
+  'home.pillars.lead': 'Trasio použiješ na plánování výletu, na sbírání míst i jen na hledání spojení. Nejvíc ti dá, když se to spojí.',
+  'home.pillar.plan.badge': 'Hlavní funkce',
+  'home.pillar.plan.title': 'Plánování výletů',
+  'home.pillar.plan.text': 'Jednodenní i vícedenní výlety. Dny, etapy, body trasy, poznámky a doprava v jednom plánu.',
+  'home.pillar.places.title': 'Místa a návštěvy',
+  'home.pillar.places.text': 'Hrady, rozhledny, jeskyně. Označ, co chceš vidět, a Trasio si pamatuje, kde už jsi byl.',
+  'home.pillar.journeys.title': 'Hledání spojení',
+  'home.pillar.journeys.text': 'Vlaky a autobusy po celém Česku, se zastávkami, ke kterým dojdeš pěšky.',
 
-  'home.steps.title': 'Jak to funguje',
-  'home.step1.title': 'Najdi spojení',
-  'home.step1.text': 'Zadej odkud a kam. Trasio najde spojení i se zastávkami v okolí, ke kterým dojdeš pěšky.',
-  'home.step2.title': 'Naplánuj výlet',
-  'home.step2.text': 'Klikni body do mapy, přidej místa z okolí a poznámky. Doprava tam a zpět je součástí plánu.',
-  'home.step3.title': 'Projdi a ulož',
-  'home.step3.text': 'Výlet spusť, dokonči a nahraj záznam. Zůstane ti v archivu i s datem a statistikou.',
+  'home.plan.eyebrow': 'Plánování výletů',
+  'home.plan.title': 'Výlet na jeden den i na celý týden',
+  'home.plan.text':
+    'Plán je tvoje šablona výletu. Nemá datum, takže ho použiješ, kdy se ti hodí, i víckrát. Datum dostane až výlet, který opravdu projdeš.',
+  'home.plan.b1': 'Dny a etapy — pěšky i na kole, trasa vede po cestách.',
+  'home.plan.b2': 'Poznámky k bodům: vstupné, otevírací doba, kde se najíst.',
+  'home.plan.b3': 'Místa z okolí každého bodu přidáš jedním klikem.',
+  'home.plan.b4': 'Doprava tam, mezi etapami a zpět je součástí plánu.',
+  'home.plan.b5': 'Délka, čas, převýšení a výškový profil.',
+  'home.plan.b6': 'Sdílení odkazem, plánování ve dvou, export do GPX a do kalendáře.',
+  'home.plan.alt': 'Detail výletu: etapa, body a výškový profil',
+  'home.plan.altPoints': 'Body etapy s poznámkou a místy z okolí',
 
-  'home.showcase.map.title': 'Mapa, kterou známe z cest',
-  'home.showcase.map.text':
-    'Turistická mapa Trasia vzniká z OpenStreetMap a výškových dat. Ukazuje značené trasy, reliéf a zastávky veřejné dopravy.',
-  'home.showcase.map.alt': 'Mapa Trasia s turistickými trasami a zastávkami v okolí Brna',
-  'home.showcase.plan.title': 'Plán, záznam, nebo obojí',
-  'home.showcase.plan.text':
-    'Detail výletu ukazuje plánovanou trasu, nahraný záznam a výškový profil. Body a etapy máš přehledně pod sebou.',
-  'home.showcase.plan.alt': 'Detail výletu: etapa, body a výškový profil',
-  'home.showcase.points.title': 'Místa z okolí trasy',
-  'home.showcase.points.text':
-    'U každého bodu vidíš zajímavá místa v okruhu 250 m až 2 km. Jedním klikem je přidáš do plánu.',
-  'home.showcase.points.alt': 'Body etapy a místa z okolí s tlačítkem Přidat',
+  'home.places.eyebrow': 'Místa a návštěvy',
+  'home.places.title': 'Chceš vidět všechny hrady v okolí Brna?',
+  'home.places.text':
+    'Vyfiltruj hrady na mapě, označ je jako Chci navštívit a postupně je odškrtávej. Trasio si pamatuje, kde jsi byl a s jakým výletem.',
+  'home.places.b1': 'Hrady, zříceniny, rozhledny, jeskyně, koupaliště, pivovary a další typy.',
+  'home.places.b2': 'Chci navštívit a Navštíveno — na mapě i v seznamu.',
+  'home.places.b3': 'Vlastní hodnocení a soukromá poznámka ke každému místu.',
+  'home.places.b4': 'Z místa rovnou Spojení sem, nebo Přidat do trasy.',
+  'home.places.alt': 'Detail místa: hrad Valdštejn s hodnocením a stavem Navštíveno',
 
-  'home.mobile.title': 'V mobilu i offline',
-  'home.mobile.text':
-    'Web funguje i v telefonu. Připravujeme aplikaci pro Android, která bude fungovat bez signálu a pošle trasu do hodinek.',
-  'home.mobile.badge': 'Android — připravujeme',
-  'home.mobile.altWeb': 'Trasio v mobilním prohlížeči: výsledek hledání spojení',
-  'home.mobile.altApp': 'Návrh aplikace pro Android: detail místa',
+  'home.journeys.eyebrow': 'Hledání spojení',
+  'home.journeys.title': 'Jen spojení? Taky jde.',
+  'home.journeys.text':
+    'Hledání spojení funguje i samostatně, bez účtu. Nastavíš, kolik chceš jít pěšky, a Trasio hledá i zastávky v tomto okruhu, nejen tu nejbližší. Delší chůze často znamená rychlejší vlak místo autobusu.',
+  'home.journeys.alt': 'Spojení z Brna na hrad Pernštejn s pěšími úseky a mapou',
+
+  'home.together.title': 'Nejlepší je to dohromady',
+  'home.together.lead': 'Místa, trasa i doprava se potkají v jednom plánu.',
+  'home.step1.title': 'Vyber cíl',
+  'home.step1.text': 'Místo z mapy nebo ze seznamu míst, která chceš navštívit.',
+  'home.step2.title': 'Poskládej trasu',
+  'home.step2.text': 'Body, dny a etapy. K bodům poznámky a místa z okolí.',
+  'home.step3.title': 'Přidej dopravu',
+  'home.step3.text': 'Spoj tam a zpět, ke kterému dojdeš. Na den v týdnu, nebo na konkrétní datum.',
+  'home.step4.title': 'Projdi a ulož',
+  'home.step4.text': 'Výlet spusť, dokonči, nahraj záznam a označ navštívená místa.',
+
+  'home.android.badge': 'Aplikace pro Android',
+  'home.android.title': 'Trasio v telefonu. I bez signálu.',
+  'home.android.text':
+    'Aplikace pro Android má výlety, místa, mapu i spojení. Data čte z telefonu, takže funguje i tam, kde není signál. Změny pošle na server, až bude spojení.',
+  'home.android.b1': 'Offline turistická mapa.',
+  'home.android.b2': 'Záznam trasy přes GPS telefonu.',
+  'home.android.b3': 'Výlety a místa jsou stejné jako na webu.',
+  'home.android.wearables':
+    'Nositelná zařízení: připravujeme posílání trasy do hodinek a stahování záznamu zpět. Jako první Garmin.',
+  'home.android.altWeb': 'Trasio v telefonu: výsledek hledání spojení',
+  'home.android.altApp': 'Aplikace pro Android: detail místa',
 
   'home.open.title': 'Postaveno na otevřených datech',
   'home.open.text':
@@ -100,7 +113,7 @@ const cs = {
   'home.open.link': 'Licence a zdroje dat',
 
   'home.cta.title': 'Kam vyrazíš o víkendu?',
-  'home.cta.text': 'Vyzkoušej hledání spojení. Pro plány a výlety se přihlas.',
+  'home.cta.text': 'Naplánuj první výlet. Hledání spojení a mapa fungují i bez přihlášení.',
 
   'guide.title': 'Návod',
   'guide.lead': 'Jak Trasio používat: od prvního spojení po archiv výletů.',
@@ -133,7 +146,7 @@ export type UiKey = keyof typeof cs;
 
 const en: Record<UiKey, string> = {
   'site.description':
-    'Trasio — plan hiking trips by train and bus. Journeys with a walking limit, plans, track records and a map of places.',
+    'Trasio — plan one-day and multi-day trips with notes, places along the way and journeys there and back. Collect the places you visit.',
   'site.tagline': 'plan · archive · share',
   'nav.features': 'Features',
   'nav.guide': 'Guide',
@@ -150,64 +163,77 @@ const en: Record<UiKey, string> = {
   'footer.mapData': 'Map data © OpenStreetMap contributors',
   'footer.rights': 'Trasio',
 
-  'home.title': 'Trasio — hiking trips by public transport',
+  'home.title': 'Trasio — trip planning',
   'home.hero.eyebrow': 'Trip planner for Czechia',
-  'home.hero.title': 'Go hiking by train. No car, no stress.',
+  'home.hero.title': 'Plan your whole trip. Even for many days.',
   'home.hero.lead':
-    'Trasio finds journeys you can walk to. You set how far you want to walk, and Trasio looks for stops in this radius. Plan the trip, walk it and keep it.',
+    'In Trasio you build a trip for one day or a whole week: the route by days and stages, notes on points, places along the way and journeys there and back. Then you walk it and keep it in your archive.',
   'home.hero.cta': 'Open Trasio',
-  'home.hero.secondary': 'How it works',
-  'home.hero.note': 'Free, in your web browser. The Android app is in progress.',
-  'home.hero.alt': 'Trasio: a journey from Brno to Pernštejn castle with walking legs and a map',
+  'home.hero.secondary': 'What Trasio does',
+  'home.hero.note': 'Free on the web and in the Android app.',
+  'home.hero.alt': 'Trasio hiking map with routes and stops near Brno',
 
-  'home.features.title': 'What Trasio does',
-  'home.features.lead': 'One place for the whole trip: from the idea, through the journey, to the track record.',
-  'home.f.connections.title': 'Journeys with a walking limit',
-  'home.f.connections.text':
-    'Finds trains, buses and trams in all of Czechia. Every journey shows its walking legs. You decide how far you walk.',
-  'home.f.plans.title': 'Plans without a date',
-  'home.f.plans.text':
-    'A plan is a trip template: stages, points, notes and transport there and back. Only a trip you really walk gets a date.',
-  'home.f.map.title': 'Hiking map',
-  'home.f.map.text':
-    'Our own map with relief, contour lines, hiking and cycling routes. Stops and places right on the map.',
-  'home.f.places.title': 'Places and ratings',
-  'home.f.places.text':
-    'Castles, lookout towers, caves, restaurants. Mark what you want to visit and where you have been, and rate it.',
-  'home.f.record.title': 'Records and archive',
-  'home.f.record.text':
-    'Upload GPX or KML from your watch. Compare the plan with the real track and the elevation profile.',
-  'home.f.share.title': 'Sharing with privacy',
-  'home.f.share.text':
-    'Share a trip with a read or edit link. You can hide the start and the end of the route from others.',
+  'home.pillars.title': 'Three things, one place',
+  'home.pillars.lead': 'Use Trasio to plan trips, to collect places, or just to find a journey. It gives you the most when it all comes together.',
+  'home.pillar.plan.badge': 'Main feature',
+  'home.pillar.plan.title': 'Trip planning',
+  'home.pillar.plan.text': 'One-day and multi-day trips. Days, stages, route points, notes and transport in one plan.',
+  'home.pillar.places.title': 'Places and visits',
+  'home.pillar.places.text': 'Castles, lookout towers, caves. Mark what you want to see, and Trasio remembers where you have been.',
+  'home.pillar.journeys.title': 'Journey search',
+  'home.pillar.journeys.text': 'Trains and buses across Czechia, with stops you can walk to.',
 
-  'home.steps.title': 'How it works',
-  'home.step1.title': 'Find a journey',
-  'home.step1.text': 'Enter from and to. Trasio also finds journeys with stops nearby that you can walk to.',
-  'home.step2.title': 'Plan the trip',
-  'home.step2.text': 'Click points on the map, add places nearby and notes. Transport there and back is part of the plan.',
-  'home.step3.title': 'Walk it and keep it',
-  'home.step3.text': 'Start the trip, finish it and upload the track. It stays in your archive with the date and stats.',
+  'home.plan.eyebrow': 'Trip planning',
+  'home.plan.title': 'A trip for one day or a whole week',
+  'home.plan.text':
+    'A plan is your trip template. It has no date, so you use it when it suits you, and more than once. Only a trip you really walk gets a date.',
+  'home.plan.b1': 'Days and stages — on foot or by bike, the route follows paths.',
+  'home.plan.b2': 'Notes on points: entry fee, opening hours, where to eat.',
+  'home.plan.b3': 'Add places near any point with one click.',
+  'home.plan.b4': 'Transport there, between stages and back is part of the plan.',
+  'home.plan.b5': 'Length, time, climb and elevation profile.',
+  'home.plan.b6': 'Share with a link, plan together, export to GPX and to your calendar.',
+  'home.plan.alt': 'Trip detail: stage, points and elevation profile',
+  'home.plan.altPoints': 'Stage points with a note and places nearby',
 
-  'home.showcase.map.title': 'A map made for hiking',
-  'home.showcase.map.text':
-    'The Trasio hiking map is built from OpenStreetMap and elevation data. It shows marked trails, relief and public transport stops.',
-  'home.showcase.map.alt': 'Trasio map with hiking routes and stops near Brno',
-  'home.showcase.plan.title': 'Plan, record, or both',
-  'home.showcase.plan.text':
-    'The trip detail shows the planned route, the uploaded track and the elevation profile. Points and stages are in a clear list.',
-  'home.showcase.plan.alt': 'Trip detail: stage, points and elevation profile',
-  'home.showcase.points.title': 'Places along the route',
-  'home.showcase.points.text':
-    'For every point you see interesting places within 250 m to 2 km. One click adds them to the plan.',
-  'home.showcase.points.alt': 'Stage points and places nearby with an Add button',
+  'home.places.eyebrow': 'Places and visits',
+  'home.places.title': 'Want to see all the castles around Brno?',
+  'home.places.text':
+    'Filter castles on the map, mark them as Want to visit and tick them off one by one. Trasio remembers where you have been and on which trip.',
+  'home.places.b1': 'Castles, ruins, lookout towers, caves, pools, breweries and more.',
+  'home.places.b2': 'Want to visit and Visited — on the map and in the list.',
+  'home.places.b3': 'Your own rating and a private note for every place.',
+  'home.places.b4': 'From a place go straight to Journey here or Add to route.',
+  'home.places.alt': 'Place detail: Valdštejn castle with a rating and the Visited state',
 
-  'home.mobile.title': 'On your phone, also offline',
-  'home.mobile.text':
-    'The web works on your phone too. We are building an Android app that works without signal and sends the route to your watch.',
-  'home.mobile.badge': 'Android — in progress',
-  'home.mobile.altWeb': 'Trasio in a mobile browser: journey search results',
-  'home.mobile.altApp': 'Android app design: place detail',
+  'home.journeys.eyebrow': 'Journey search',
+  'home.journeys.title': 'Just a journey? That works too.',
+  'home.journeys.text':
+    'Journey search also works on its own, without an account. You set how far you want to walk, and Trasio also looks for stops in this radius, not only the nearest one. A longer walk often means a faster train instead of a bus.',
+  'home.journeys.alt': 'A journey from Brno to Pernštejn castle with walking legs and a map',
+
+  'home.together.title': 'Best when it comes together',
+  'home.together.lead': 'Places, route and transport meet in one plan.',
+  'home.step1.title': 'Pick a goal',
+  'home.step1.text': 'A place from the map, or from your list of places to visit.',
+  'home.step2.title': 'Build the route',
+  'home.step2.text': 'Points, days and stages. Notes and places nearby on the points.',
+  'home.step3.title': 'Add transport',
+  'home.step3.text': 'A journey there and back that you can walk to. For a day of the week, or an exact date.',
+  'home.step4.title': 'Walk it and keep it',
+  'home.step4.text': 'Start the trip, finish it, upload the track and mark the places you visited.',
+
+  'home.android.badge': 'Android app',
+  'home.android.title': 'Trasio on your phone. Also without signal.',
+  'home.android.text':
+    'The Android app has trips, places, the map and journeys. It reads data from the phone, so it works where there is no signal. It sends changes to the server when there is a connection.',
+  'home.android.b1': 'Offline hiking map.',
+  'home.android.b2': 'Track recording with the phone GPS.',
+  'home.android.b3': 'The same trips and places as on the web.',
+  'home.android.wearables':
+    'Wearables: we are working on sending the route to your watch and getting the track back. Garmin comes first.',
+  'home.android.altWeb': 'Trasio on a phone: journey search results',
+  'home.android.altApp': 'Android app: place detail',
 
   'home.open.title': 'Built on open data',
   'home.open.text':
@@ -215,7 +241,7 @@ const en: Record<UiKey, string> = {
   'home.open.link': 'Licenses and data sources',
 
   'home.cta.title': 'Where will you go this weekend?',
-  'home.cta.text': 'Try the journey search. Sign in for plans and trips.',
+  'home.cta.text': 'Plan your first trip. Journey search and the map also work without signing in.',
 
   'guide.title': 'Guide',
   'guide.lead': 'How to use Trasio: from your first journey to the trip archive.',

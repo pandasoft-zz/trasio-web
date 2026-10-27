@@ -1,7 +1,7 @@
 ---
 title: Sdílení a soukromí
 description: Kdo uvidí tvoje výlety a jak je sdílet.
-order: 5
+order: 6
 ---
 
 ## Viditelnost výletu

@@ -1,15 +1,14 @@
 ---
 import { Image } from 'astro:assets';
-import Route from '@lucide/astro/icons/route';
-import CalendarOff from '@lucide/astro/icons/calendar-off';
-import MapIcon from '@lucide/astro/icons/map';
+import CalendarRange from '@lucide/astro/icons/calendar-range';
 import MapPin from '@lucide/astro/icons/map-pin';
-import Activity from '@lucide/astro/icons/activity';
-import EyeOff from '@lucide/astro/icons/eye-off';
+import Route from '@lucide/astro/icons/route';
+import Check from '@lucide/astro/icons/check';
+import Watch from '@lucide/astro/icons/watch';
 import ArrowRight from '@lucide/astro/icons/arrow-right';
 import Base from '../../layouts/Base.astro';
 import JourneyBar from '../../components/JourneyBar.astro';
-import { APP_URL, langPaths, localePath, useTranslations, type Locale } from '../../i18n/ui';
+import { APP_URL, langPaths, localePath, useTranslations, type Locale, type UiKey } from '../../i18n/ui';
 import webConnections from '../../assets/screens/web-connections.jpg';
 import webMap from '../../assets/screens/web-map.jpg';
 import tripDetail from '../../assets/screens/design-trip-detail.jpg';
@@ -22,16 +21,16 @@ export const getStaticPaths = langPaths;
 const lang = Astro.params.lang as Locale;
 const t = useTranslations(lang);
 
-const features = [
-  { icon: Route, key: 'connections' },
-  { icon: CalendarOff, key: 'plans' },
-  { icon: MapIcon, key: 'map' },
-  { icon: MapPin, key: 'places' },
-  { icon: Activity, key: 'record' },
-  { icon: EyeOff, key: 'share' },
+const pillars = [
+  { icon: CalendarRange, key: 'plan', href: '#plan', main: true },
+  { icon: MapPin, key: 'places', href: '#places', main: false },
+  { icon: Route, key: 'journeys', href: '#journeys', main: false },
 ] as const;
 
-const steps = [1, 2, 3] as const;
+const planBullets = ['b1', 'b2', 'b3', 'b4', 'b5', 'b6'].map((b) => `home.plan.${b}` as UiKey);
+const placeBullets = ['b1', 'b2', 'b3', 'b4'].map((b) => `home.places.${b}` as UiKey);
+const androidBullets = ['b1', 'b2', 'b3'].map((b) => `home.android.${b}` as UiKey);
+const steps = [1, 2, 3, 4] as const;
 ---
 
 <Base lang={lang} title={t('home.title')}>
@@ -43,14 +42,13 @@ const steps = [1, 2, 3] as const;
         <p class="lead">{t('home.hero.lead')}</p>
         <div class="actions">
           <a class="btn btn-primary" href={APP_URL}>{t('home.hero.cta')} <ArrowRight size={18} aria-hidden="true" /></a>
-          <a class="btn btn-ghost" href="#how">{t('home.hero.secondary')}</a>
+          <a class="btn btn-ghost" href="#features">{t('home.hero.secondary')}</a>
         </div>
         <p class="note">{t('home.hero.note')}</p>
-        <JourneyBar />
       </div>
       <div class="hero-shot">
         <Image
-          src={webConnections}
+          src={webMap}
           alt={t('home.hero.alt')}
           widths={[640, 960, 1440, 2000]}
           sizes="(max-width: 960px) 100vw, 640px"
@@ -65,18 +63,21 @@ const steps = [1, 2, 3] as const;
   <section class="section" id="features">
     <div class="container">
       <div class="section-head">
-        <h2>{t('home.features.title')}</h2>
-        <p class="lead">{t('home.features.lead')}</p>
+        <h2>{t('home.pillars.title')}</h2>
+        <p class="lead">{t('home.pillars.lead')}</p>
       </div>
-      <ul class="features">
+      <ul class="pillars">
         {
-          features.map(({ icon: Icon, key }) => (
-            <li class="card feature">
-              <span class="feature-icon">
-                <Icon size={22} aria-hidden="true" />
-              </span>
-              <h3>{t(`home.f.${key}.title`)}</h3>
-              <p>{t(`home.f.${key}.text`)}</p>
+          pillars.map(({ icon: Icon, key, href, main }) => (
+            <li>
+              <a class:list={['card', 'pillar', { main }]} href={href}>
+                <span class="pillar-icon">
+                  <Icon size={24} aria-hidden="true" />
+                </span>
+                {main && <span class="pillar-badge">{t('home.pillar.plan.badge')}</span>}
+                <h3>{t(`home.pillar.${key}.title`)}</h3>
+                <p>{t(`home.pillar.${key}.text`)}</p>
+              </a>
             </li>
           ))
         }
@@ -84,10 +85,82 @@ const steps = [1, 2, 3] as const;
     </div>
   </section>
 
-  <section class="section steps-section" id="how">
+  <section class="section feature" id="plan">
+    <div class="container feature-grid">
+      <div>
+        <span class="eyebrow">{t('home.plan.eyebrow')}</span>
+        <h2>{t('home.plan.title')}</h2>
+        <p class="lead">{t('home.plan.text')}</p>
+        <ul class="checks">
+          {
+            planBullets.map((k) => (
+              <li>
+                <Check size={18} aria-hidden="true" />
+                {t(k)}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="stack">
+        <Image src={tripDetail} alt={t('home.plan.alt')} widths={[640, 925]} sizes="(max-width: 960px) 100vw, 620px" class="shot" />
+        <Image
+          src={stagePoints}
+          alt={t('home.plan.altPoints')}
+          widths={[300, 600]}
+          sizes="280px"
+          class="shot stack-over"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section feature places" id="places">
+    <div class="container feature-grid reverse">
+      <div>
+        <span class="eyebrow">{t('home.places.eyebrow')}</span>
+        <h2>{t('home.places.title')}</h2>
+        <p class="lead">{t('home.places.text')}</p>
+        <ul class="checks">
+          {
+            placeBullets.map((k) => (
+              <li>
+                <Check size={18} aria-hidden="true" />
+                {t(k)}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="phones">
+        <Image src={androidPlace} alt={t('home.places.alt')} widths={[280, 560]} sizes="280px" class="phone" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section feature dark" id="journeys">
+    <div class="container feature-grid">
+      <div>
+        <span class="eyebrow">{t('home.journeys.eyebrow')}</span>
+        <h2>{t('home.journeys.title')}</h2>
+        <p class="lead">{t('home.journeys.text')}</p>
+        <JourneyBar />
+      </div>
+      <Image
+        src={webConnections}
+        alt={t('home.journeys.alt')}
+        widths={[640, 1280, 2000]}
+        sizes="(max-width: 960px) 100vw, 620px"
+        class="shot"
+      />
+    </div>
+  </section>
+
+  <section class="section" id="how">
     <div class="container">
       <div class="section-head">
-        <h2>{t('home.steps.title')}</h2>
+        <h2>{t('home.together.title')}</h2>
+        <p class="lead">{t('home.together.lead')}</p>
       </div>
       <ol class="steps">
         {
@@ -103,42 +176,29 @@ const steps = [1, 2, 3] as const;
     </div>
   </section>
 
-  <section class="section">
-    <div class="container showcase">
-      <div class="showcase-row">
-        <div>
-          <h2>{t('home.showcase.map.title')}</h2>
-          <p class="lead">{t('home.showcase.map.text')}</p>
-        </div>
-        <Image src={webMap} alt={t('home.showcase.map.alt')} widths={[640, 1280, 2000]} sizes="(max-width: 960px) 100vw, 680px" class="shot" />
-      </div>
-      <div class="showcase-row reverse">
-        <div>
-          <h2>{t('home.showcase.plan.title')}</h2>
-          <p class="lead">{t('home.showcase.plan.text')}</p>
-        </div>
-        <Image src={tripDetail} alt={t('home.showcase.plan.alt')} widths={[640, 925]} sizes="(max-width: 960px) 100vw, 680px" class="shot" />
-      </div>
-      <div class="showcase-row">
-        <div>
-          <h2>{t('home.showcase.points.title')}</h2>
-          <p class="lead">{t('home.showcase.points.text')}</p>
-        </div>
-        <Image src={stagePoints} alt={t('home.showcase.points.alt')} widths={[420, 810]} sizes="(max-width: 960px) 90vw, 420px" class="shot narrow" />
-      </div>
-    </div>
-  </section>
-
-  <section class="section mobile">
-    <div class="container mobile-grid">
+  <section class="section feature dark">
+    <div class="container feature-grid reverse">
       <div>
-        <span class="badge">{t('home.mobile.badge')}</span>
-        <h2>{t('home.mobile.title')}</h2>
-        <p class="lead">{t('home.mobile.text')}</p>
+        <span class="badge">{t('home.android.badge')}</span>
+        <h2>{t('home.android.title')}</h2>
+        <p class="lead">{t('home.android.text')}</p>
+        <ul class="checks">
+          {
+            androidBullets.map((k) => (
+              <li>
+                <Check size={18} aria-hidden="true" />
+                {t(k)}
+              </li>
+            ))
+          }
+        </ul>
+        <p class="wearables">
+          <Watch size={20} aria-hidden="true" />
+          <span>{t('home.android.wearables')}</span>
+        </p>
       </div>
       <div class="phones">
-        <Image src={mobileConnections} alt={t('home.mobile.altWeb')} widths={[280, 560]} sizes="280px" class="phone" />
-        <Image src={androidPlace} alt={t('home.mobile.altApp')} widths={[280, 560]} sizes="280px" class="phone" />
+        <Image src={mobileConnections} alt={t('home.android.altWeb')} widths={[280, 560]} sizes="280px" class="phone" />
       </div>
     </div>
   </section>
@@ -170,7 +230,8 @@ const steps = [1, 2, 3] as const;
     overflow: hidden;
   }
 
-  .hero-grid {
+  .hero-grid,
+  .feature-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
     gap: 48px;
@@ -202,38 +263,150 @@ const steps = [1, 2, 3] as const;
     border-color: var(--color-forest-active);
   }
 
-  .features {
+  /* Three pillars; the first one (trip planning) is the main one. */
+  .pillars {
     list-style: none;
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: 1.3fr 1fr 1fr;
     gap: 20px;
   }
 
-  .feature {
-    padding: 24px;
+  .pillar {
+    display: block;
+    height: 100%;
+    padding: 28px;
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 0.15s, transform 0.15s;
   }
 
-  .feature p {
+  .pillar:hover {
+    color: inherit;
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+  }
+
+  .pillar p {
     color: var(--color-text-secondary);
     margin: 0;
   }
 
-  .feature-icon {
+  .pillar.main {
+    background: var(--color-forest);
+    border-color: var(--color-forest);
+    color: var(--color-on-forest);
+  }
+
+  .pillar.main h3 {
+    color: #fff;
+    font-size: 1.4rem;
+  }
+
+  .pillar.main p {
+    color: var(--color-forest-text);
+  }
+
+  .pillar-icon {
     display: inline-flex;
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     align-items: center;
     justify-content: center;
     border-radius: var(--radius-md);
     background: var(--color-primary-light);
     color: var(--color-primary);
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
 
-  .steps-section {
+  .pillar.main .pillar-icon {
+    background: var(--color-accent);
+    color: #fff;
+  }
+
+  .pillar-badge {
+    display: inline-block;
+    margin-left: 12px;
+    padding: 2px 10px;
+    border-radius: var(--radius-pill);
+    background: var(--color-forest-active);
+    font-size: 0.8rem;
+    font-weight: 600;
+    vertical-align: super;
+  }
+
+  .feature .reverse > div:first-child {
+    order: 2;
+  }
+
+  .places {
     background: var(--color-primary-light);
+  }
+
+  .dark {
+    background: var(--color-forest);
+    color: var(--color-on-forest);
+  }
+
+  .dark h2 {
+    color: #fff;
+  }
+
+  .dark .lead,
+  .dark .checks {
+    color: var(--color-forest-text);
+  }
+
+  .dark :global(.shot) {
+    border-color: var(--color-forest-active);
+  }
+
+  .checks {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0;
+    display: grid;
+    gap: 10px;
+    color: var(--color-text-secondary);
+  }
+
+  .checks li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .checks :global(svg) {
+    flex: none;
+    margin-top: 4px;
+    color: var(--color-accent);
+  }
+
+  /* Trip detail with the stage points card over its corner. */
+  .stack {
+    position: relative;
+    padding-bottom: 80px;
+  }
+
+  .stack :global(.stack-over) {
+    position: absolute;
+    right: -16px;
+    bottom: 0;
+    width: min(240px, 42%);
+  }
+
+  .phones {
+    display: flex;
+    justify-content: center;
+  }
+
+  .phones :global(.phone) {
+    width: min(280px, 70%);
+    border-radius: 28px;
+    border: 6px solid #0d1a12;
+    box-shadow: var(--shadow-float);
+    background: #fff;
   }
 
   .steps {
@@ -241,7 +414,7 @@ const steps = [1, 2, 3] as const;
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 32px;
   }
 
@@ -264,48 +437,6 @@ const steps = [1, 2, 3] as const;
     box-shadow: 0 0 0 4px #fff;
   }
 
-  .showcase {
-    display: grid;
-    gap: clamp(56px, 8vw, 96px);
-  }
-
-  .showcase-row {
-    display: grid;
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-    gap: 48px;
-    align-items: center;
-  }
-
-  .showcase-row.reverse > div {
-    order: 2;
-  }
-
-  .showcase-row :global(.narrow) {
-    width: 100%;
-    max-width: 420px;
-    justify-self: center;
-  }
-
-  .mobile {
-    background: var(--color-forest);
-    color: var(--color-on-forest);
-  }
-
-  .mobile h2 {
-    color: #fff;
-  }
-
-  .mobile .lead {
-    color: var(--color-forest-text);
-  }
-
-  .mobile-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 48px;
-    align-items: center;
-  }
-
   .badge {
     display: inline-block;
     padding: 4px 12px;
@@ -317,22 +448,22 @@ const steps = [1, 2, 3] as const;
     margin-bottom: 16px;
   }
 
-  .phones {
+  .wearables {
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    gap: 12px;
+    align-items: flex-start;
+    margin-top: 28px;
+    padding: 14px 16px;
+    border: 1px solid var(--color-forest-active);
+    border-radius: var(--radius-md);
+    color: var(--color-forest-text);
+    font-size: 0.95rem;
   }
 
-  .phones :global(.phone) {
-    width: min(260px, 45%);
-    border-radius: 28px;
-    border: 6px solid #0d1a12;
-    box-shadow: var(--shadow-float);
-    background: #fff;
-  }
-
-  .phones :global(.phone:nth-child(2)) {
-    margin-top: 48px;
+  .wearables :global(svg) {
+    flex: none;
+    margin-top: 2px;
+    color: var(--color-accent);
   }
 
   .open {
@@ -365,15 +496,28 @@ const steps = [1, 2, 3] as const;
 
   @media (max-width: 960px) {
     .hero-grid,
-    .showcase-row,
-    .mobile-grid {
+    .feature-grid {
       grid-template-columns: minmax(0, 1fr);
     }
 
-    .showcase-row.reverse > div {
+    .feature .reverse > div:first-child {
       order: 0;
     }
 
+    .pillars {
+      grid-template-columns: 1fr;
+    }
+
+    .steps {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .stack :global(.stack-over) {
+      right: 0;
+    }
+  }
+
+  @media (max-width: 560px) {
     .steps {
       grid-template-columns: 1fr;
     }

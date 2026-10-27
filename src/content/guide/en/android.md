@@ -1,27 +1,33 @@
 ---
 title: Android app
-description: What the mobile app will do.
-order: 6
+description: Trasio on your phone, also without signal.
+order: 7
 ---
 
-> The app is in development. This page describes the plan, not the current state.
+![Android app: place detail](../../../assets/screens/design-android-place.png)
 
-![App design: place detail](../../../assets/screens/design-android-place.png)
-
-The Android app will have the same parts as the web: **Journeys**,
-**Trips**, **Map** and **Profile**.
+The Android app has the same parts as the web: **Journeys**, **Trips**,
+**Map**, **Places** and **Profile**. You sign in with the same account as on
+the web.
 
 ## Works without signal
 
 The app reads data from the phone. Without signal, your trips, plans and
 places stay available. Changes go to the server when there is a connection.
+The app does not sign you out when the sign-in expires offline.
 
-## Watch and track records
+## Offline map
 
-The app will send the route to your watch (Garmin first) and download the
-track record back. Health Connect and GPX and FIT import are in progress.
+Download the hiking map to your phone. Then you have it where there is no
+signal, with hiking routes, relief and contour lines.
 
-## Sign-in
+## On the trip
 
-You sign in with the same account as on the web. The app does not sign you
-out when the sign-in expires offline — your data stays readable.
+- **Start trip** and **Finish trip**, as on the web.
+- **Track recording** with the phone GPS.
+- Import of older tracks from Samsung Health.
+
+## Wearables
+
+We are working on sending the route to your watch and getting the track
+back. Garmin comes first.

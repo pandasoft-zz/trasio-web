@@ -1,7 +1,7 @@
 ---
 title: Sharing and privacy
 description: Who sees your trips and how to share them.
-order: 5
+order: 6
 ---
 
 ## Trip visibility

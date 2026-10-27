@@ -1,7 +1,7 @@
 ---
 title: Hledání spojení
 description: Jak najít spojení s rozumnou pěší docházkou.
-order: 2
+order: 4
 ---
 
 ![Výsledek hledání spojení z Brna na hrad Pernštejn](../../../assets/screens/web-connections.jpg)

@@ -1,7 +1,7 @@
 ---
 title: Plány a výlety
 description: Jak naplánovat výlet, projít ho a uložit do archivu.
-order: 3
+order: 2
 ---
 
 ![Detail výletu s etapou, body a výškovým profilem](../../../assets/screens/design-trip-detail.jpg)
@@ -30,6 +30,19 @@ Stav výletu vidíš jen ty. Ostatní ho neuvidí nikdy.
 4. Delší výlet rozděl na **dny** a **etapy**.
 
 ![Body etapy a místa z okolí](../../../assets/screens/design-stage-points.png)
+
+## Vícedenní výlet
+
+Výlet může mít víc dní. Každý den má své etapy a každá etapa své body.
+Etapa může být pěší, nebo na kole. Mezi etapami může být doprava, třeba
+vlak do dalšího města. Délku, čas a převýšení vidíš pro celý výlet i pro
+každý den.
+
+## Poznámky
+
+Ke každému bodu napíšeš poznámku: vstupné, otevírací dobu, kde se najíst,
+kde spát. Poznámka umí tučné písmo, odrážky a odkazy. Vyplněná poznámka je
+vidět přímo v seznamu bodů.
 
 ## Doprava v plánu
 

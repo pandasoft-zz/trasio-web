@@ -4,8 +4,10 @@ description: What Trasio is, where to find it and what you need.
 order: 1
 ---
 
-Trasio is a trip planner for people who go hiking by train and bus.
-It finds journeys, helps you plan the route and keeps the trips you walked.
+Trasio is a trip planner. It helps you plan a trip for one day or more,
+with notes, places along the way and transport there and back. It remembers
+the places you want to visit and where you have been. And it finds journeys
+with stops you can walk to.
 
 The app is in Czech for now. This guide uses the Czech names of buttons and
 screens, with a translation.
@@ -13,7 +15,7 @@ screens, with a translation.
 ## Where to find Trasio
 
 - **Web:** [app.gotrasio.cz](https://app.gotrasio.cz) — works on a computer and on a phone.
-- **Android:** the app is in progress. It will also work without signal.
+- **Android:** the Android app. It also works without signal.
 
 ## Without an account
 

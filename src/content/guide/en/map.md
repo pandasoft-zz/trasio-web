@@ -1,7 +1,7 @@
 ---
-title: Map and places
-description: Map layers, the filter and working with places.
-order: 4
+title: Map
+description: Base maps, layers and the filter.
+order: 5
 ---
 
 ![Trasio hiking map with stops](../../../assets/screens/web-map.jpg)
@@ -23,15 +23,4 @@ The **Hledání a filtr** (Search and filter) panel shows the trips in the
 map view by state (Walked, New, Others), by date, length and tags. It also
 turns **places** and **stops and stations** on. You can minimise the panel.
 
-## Places
-
-Places are castles, lookout towers, caves, swimming pools, restaurants and
-more. In the place detail you can:
-
-- mark **Chci navštívit** (Want to visit) or **Navštíveno** (Visited),
-- give your rating and a private note,
-- click **Spojení sem** (Journey here).
-
-Only the average rating is public. Your visits and notes are private.
-
-You find the list of all places and your places in **Místa** (Places).
+Places and visits are in the chapter [Places and visits](../places/).

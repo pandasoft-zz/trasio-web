@@ -1,7 +1,7 @@
 ---
 title: Plans and trips
 description: How to plan a trip, walk it and keep it in the archive.
-order: 3
+order: 2
 ---
 
 ![Trip detail with a stage, points and elevation profile](../../../assets/screens/design-trip-detail.jpg)
@@ -30,6 +30,19 @@ Only you see the state of a trip. Others never see it.
 4. Split a longer trip into **days** and **stages**.
 
 ![Stage points and places nearby](../../../assets/screens/design-stage-points.png)
+
+## Multi-day trip
+
+A trip can have more days. Every day has its stages and every stage has its
+points. A stage can be on foot or by bike. Between stages there can be
+transport, for example a train to the next town. You see length, time and
+climb for the whole trip and for every day.
+
+## Notes
+
+Write a note on any point: entry fee, opening hours, where to eat, where to
+sleep. A note can have bold text, lists and links. A filled note shows right
+in the list of points.
 
 ## Transport in a plan
 

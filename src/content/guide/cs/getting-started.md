@@ -4,13 +4,14 @@ description: Co je Trasio, kde ho najdeš a co potřebuješ.
 order: 1
 ---
 
-Trasio je plánovač výletů pro lidi, kteří jezdí do přírody vlakem a autobusem.
-Najde spojení, pomůže naplánovat trasu a uloží výlety, které jsi prošel.
+Trasio je plánovač výletů. Pomůže ti naplánovat výlet na jeden i více dní,
+s poznámkami, místy po cestě a dopravou tam i zpět. Pamatuje si místa, která
+chceš navštívit a kde už jsi byl. A najde spojení, ke kterému dojdeš pěšky.
 
 ## Kde Trasio najdeš
 
 - **Web:** [app.gotrasio.cz](https://app.gotrasio.cz) — funguje v počítači i v mobilu.
-- **Android:** aplikaci připravujeme. Bude fungovat i bez signálu.
+- **Android:** aplikace pro Android. Funguje i bez signálu.
 
 ## Co jde bez přihlášení
 

@@ -1,27 +1,32 @@
 ---
 title: Aplikace pro Android
-description: Co bude umět mobilní aplikace.
-order: 6
+description: Trasio v telefonu, i bez signálu.
+order: 7
 ---
 
-> Aplikace je ve vývoji. Tahle stránka popisuje plán, ne hotový stav.
+![Aplikace pro Android: detail místa](../../../assets/screens/design-android-place.png)
 
-![Návrh aplikace: detail místa](../../../assets/screens/design-android-place.png)
-
-Aplikace pro Android bude mít stejné části jako web: **Spojení**,
-**Výlety**, **Mapa** a **Profil**.
+Aplikace pro Android má stejné části jako web: **Spojení**, **Výlety**,
+**Mapa**, **Místa** a **Profil**. Přihlásíš se stejným účtem jako na webu.
 
 ## Funguje i bez signálu
 
 Aplikace čte data z telefonu. Když není signál, výlety, plány a místa
-zůstanou dostupné. Změny se pošlou na server, až bude spojení.
+zůstanou dostupné. Změny se pošlou na server, až bude spojení. Aplikace tě
+neodhlásí, když vyprší přihlášení offline.
 
-## Hodinky a záznam
+## Offline mapa
 
-Aplikace bude posílat trasu do hodinek (nejdřív Garmin) a stahovat zpět
-záznam. Napojení na Health Connect a import GPX a FIT připravujeme.
+Turistickou mapu si stáhneš do telefonu. Pak ji máš i tam, kde není signál,
+včetně turistických tras, reliéfu a vrstevnic.
 
-## Přihlášení
+## Na výletě
 
-Přihlásíš se stejným účtem jako na webu. Aplikace tě neodhlásí, když vyprší
-přihlášení offline — data zůstanou čitelná.
+- **Začít výlet** a **Dokončit výlet** jako na webu.
+- **Záznam trasy** přes GPS telefonu.
+- Import starších záznamů ze Samsung Health.
+
+## Nositelná zařízení
+
+Připravujeme posílání trasy do hodinek a stahování záznamu zpět. Jako první
+přijde Garmin.
