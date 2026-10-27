@@ -8,6 +8,10 @@ Trasio je plánovač výletů. Pomůže ti naplánovat výlet na jeden i více d
 s poznámkami, místy po cestě a dopravou tam i zpět. Pamatuje si místa, která
 chceš navštívit a kde už jsi byl. A najde spojení, ke kterému dojdeš pěšky.
 
+Trasio funguje jen na území České republiky. Mapa, spojení veřejnou
+dopravou i místa pokrývají jen Česko. Výlet do zahraničí v něm
+nenaplánuješ.
+
 ## Kde Trasio najdeš
 
 - **Web:** [app.gotrasio.cz](https://app.gotrasio.cz) — funguje v počítači i v mobilu.

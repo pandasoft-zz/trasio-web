@@ -9,6 +9,9 @@ with notes, places along the way and transport there and back. It remembers
 the places you want to visit and where you have been. And it finds journeys
 with stops you can walk to.
 
+Trasio works only in the Czech Republic. The map, public transport journeys
+and places cover only Czechia. You cannot plan a trip abroad in it.
+
 The app is in Czech for now. This guide uses the Czech names of buttons and
 screens, with a translation.
 
