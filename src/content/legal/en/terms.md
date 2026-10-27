@@ -10,14 +10,18 @@ draft: true
 ## 1. Who runs the service
 
 The Trasio service (the website [gotrasio.cz](https://gotrasio.cz), the app
-[app.gotrasio.cz](https://app.gotrasio.cz) and the Android app) is run by
-**[name / company]**, company ID **[ID]**, address **[address]**
-(the "operator"). Contact: **[e-mail]**.
+[app.gotrasio.cz](https://app.gotrasio.cz) and the Android app) is run by a
+private person, **[first and last name]**, as a non-commercial project, not
+as a business (the "operator"). Contact: **[e-mail]**.
 
 ## 2. What the service does
 
 Trasio helps you plan trips: it searches public transport journeys, shows a
-map and places, and keeps your plans and trips. The basic features are free.
+map and places, and keeps your plans and trips. The whole service is free
+and has no paid features.
+
+The service works only in the Czech Republic. The map, public transport
+journeys and place data cover only this area.
 
 ## 3. Account
 
@@ -36,29 +40,43 @@ responsible for your own safety on the route.
 ## 5. User content
 
 - Plans, trips, notes, ratings and place suggestions are your content.
-- Do not post content that breaks the law or other people's rights.
+- You must not create or post content that breaks the law or good morals,
+  or that breaks other people's rights.
+- The operator can delete such content without notice and block or close
+  the account it comes from.
 - You allow us to show public or shared content to other users, in the
   scope you set.
 - After a review, we can use your place suggestions in the shared place
   database. **[license of contributions — to fill in]**
 
-## 6. Sharing with a link
+## 6. Do not enter confidential information
+
+Trasio is not a store for confidential data. Do not put passwords, ID
+document numbers, payment details, sensitive personal data (for example
+about health) or other confidential information into plans, trips, notes or
+anywhere else. If you do, it is at your own risk.
+
+## 7. Sharing with a link
 
 Anyone with an edit link can change the trip. Send links only to people you
 trust. You can cancel a link at any time.
 
-## 7. Availability
+## 8. Availability
 
 We do not promise that the service is always available. Features can
 change. We tell you about important changes of these terms in advance.
 
-## 8. Liability
+## 9. No warranty and no liability
 
-As far as the law allows, the operator is not liable for damage caused by
-wrong timetables, maps or place data, or by service outages.
-**[scope of liability — to fill in with a lawyer]**
+The service is free and we provide it **as is**, without any warranty. The
+operator does not guarantee that the service and its data are correct,
+complete or available. As far as the law allows, the operator is not liable
+for any damage from using the service, in particular damage caused by wrong
+timetables, maps or place data, by service outages or by loss of data. So
+keep a backup of important plans, for example as a GPX export.
+**[scope of liability — to check with a lawyer]**
 
-## 9. Final provisions
+## 10. Final provisions
 
 These terms follow the law of the Czech Republic. **[Dispute resolution,
 ADR, court — to fill in.]**
