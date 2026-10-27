@@ -29,6 +29,7 @@ const pillars = [
 
 const planBullets = ['b1', 'b2', 'b3', 'b4', 'b5', 'b6'].map((b) => `home.plan.${b}` as UiKey);
 const placeBullets = ['b1', 'b2', 'b3', 'b4'].map((b) => `home.places.${b}` as UiKey);
+const journeyBullets = ['b1', 'b2', 'b3'].map((b) => `home.journeys.${b}` as UiKey);
 const androidBullets = ['b1', 'b2', 'b3'].map((b) => `home.android.${b}` as UiKey);
 const steps = [1, 2, 3, 4] as const;
 ---
@@ -144,6 +145,16 @@ const steps = [1, 2, 3, 4] as const;
         <span class="eyebrow">{t('home.journeys.eyebrow')}</span>
         <h2>{t('home.journeys.title')}</h2>
         <p class="lead">{t('home.journeys.text')}</p>
+        <ul class="checks">
+          {
+            journeyBullets.map((k) => (
+              <li>
+                <Check size={18} aria-hidden="true" />
+                {t(k)}
+              </li>
+            ))
+          }
+        </ul>
         <JourneyBar />
       </div>
       <Image
