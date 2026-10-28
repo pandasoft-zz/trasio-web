@@ -112,7 +112,15 @@ const cs = {
 
   'home.open.title': 'Postaveno na otevřených datech',
   'home.open.text':
-    'Jízdní řády, mapa i výšková data pocházejí z otevřených zdrojů. Celý systém běží na svobodném softwaru.',
+    'Jízdní řády, mapa i výšková data pocházejí z otevřených zdrojů. Celý systém běží na svobodném softwaru. Co jsme pro Trasio postavili sami, dáváme zpátky jako open source, aby to mohl použít i někdo další.',
+  'home.open.map.title': 'Vlastní turistická a topografická mapa',
+  'home.open.map.text':
+    'Mapu si Trasio vykresluje samo. Je to turistická a topografická mapa Česka se stínovaným reliéfem, vrstevnicemi po 10 metrech, značenými trasami KČT a cyklotrasami. Vzniká z OpenStreetMap a lidarových výškových dat. Celý postup výroby je open source.',
+  'home.open.map.link': 'Czech Tourist Map',
+  'home.open.motis.title': 'Hotový server pro hledání spojení',
+  'home.open.motis.text':
+    'Spojení hledá MOTIS. Pro něj chystáme balíčky s daty české veřejné dopravy: vlaky, celostátní a regionální autobusy, PID a IDS JMK. Každý týden se sestaví znovu. Stačí jeden příkaz docker run a máš vlastní vyhledávač spojení pro celé Česko. Licence MIT.',
+  'home.open.motis.link': 'motis-bundles',
   'home.open.link': 'Licence a zdroje dat',
 
   'home.cta.title': 'Kam vyrazíš o víkendu?',
@@ -243,7 +251,15 @@ const en: Record<UiKey, string> = {
 
   'home.open.title': 'Built on open data',
   'home.open.text':
-    'Timetables, the map and elevation data come from open sources. The whole system runs on free software.',
+    'Timetables, the map and elevation data come from open sources. The whole system runs on free software. What we built for Trasio ourselves, we give back as open source, so others can use it too.',
+  'home.open.map.title': 'Our own hiking and topographic map',
+  'home.open.map.text':
+    'Trasio renders its own map. It is a hiking and topographic map of Czechia with relief shading, contour lines every 10 metres, marked KČT hiking trails and cycling routes. It is made from OpenStreetMap and lidar elevation data. The whole build is open source.',
+  'home.open.map.link': 'Czech Tourist Map',
+  'home.open.motis.title': 'A ready-to-run journey planner',
+  'home.open.motis.text':
+    'Journeys are found by MOTIS. We build images of it with Czech public transport data: trains, national and regional buses, Prague (PID) and South Moravian (IDS JMK) transport. They are rebuilt every week. One docker run command gives you your own journey planner for all of Czechia. MIT license.',
+  'home.open.motis.link': 'motis-bundles',
   'home.open.link': 'Licenses and data sources',
 
   'home.cta.title': 'Where will you go this weekend?',

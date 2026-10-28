@@ -119,6 +119,24 @@ export const software: LicenseItem[] = [
     license: 'MIT',
   },
   {
+    name: 'motis-bundles',
+    url: 'https://github.com/pandasoft-zz/motis-bundles',
+    use: {
+      cs: 'Naše hotové obrazy MOTIS s daty české veřejné dopravy.',
+      en: 'Our ready-to-run MOTIS images with Czech public transport data.',
+    },
+    license: 'MIT',
+  },
+  {
+    name: 'Czech Tourist Map',
+    url: 'https://pandasoft-zz.github.io/CzechTouristMap/',
+    use: {
+      cs: 'Naše turistická a topografická mapa (PMTiles a styl MapLibre).',
+      en: 'Our hiking and topographic map (PMTiles and a MapLibre style).',
+    },
+    license: '[doplnit / add]',
+  },
+  {
     name: 'MapLibre GL JS',
     url: 'https://maplibre.org/',
     use: { cs: 'Zobrazení mapy na webu.', en: 'Map display on the web.' },
