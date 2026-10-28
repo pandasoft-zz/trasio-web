@@ -1,15 +1,15 @@
 ---
 title: Ochrana osobních údajů
 description: Jaké osobní údaje Trasio zpracovává a proč.
-validFrom: '[datum]'
+# TODO: doplnit datum platnosti (validFrom).
 draft: true
 ---
 
 ## 1. Správce
 
-Správcem osobních údajů je provozovatel služby, soukromá osoba
-**[jméno a příjmení]**.
-Kontakt pro otázky k osobním údajům: **[e-mail]**.
+Správcem osobních údajů je provozovatel služby, soukromá osoba.
+
+<!-- TODO: doplnit jméno a příjmení správce a kontaktní e-mail. -->
 
 ## 2. Jaké údaje zpracováváme
 
@@ -34,18 +34,20 @@ Hledání spojení funguje bez účtu. Zadaná místa k tobě nepřiřazujeme.
 
 ## 4. Kdo údaje zpracovává za nás
 
+<!-- TODO: doplnit poskytovatele serveru a e-mailu a stát, kde údaje zpracovávají. -->
+
 | Zpracovatel | Účel | Kde |
 |---|---|---|
-| **[poskytovatel serveru]** | Provoz serveru a databáze | **[stát]** |
 | Cloudflare, Inc. | Doručení webu, ochrana proti útokům | EU / USA (standardní smluvní doložky) |
-| **[poskytovatel e-mailu]** | Odesílání e-mailů k účtu | **[stát]** |
 | Seznam.cz, a.s. (Mapy.cz API) | Výpočet pěších a cyklo tras — dostává jen souřadnice bodů, ne údaje o tobě | ČR |
 
 ## 5. Jak dlouho údaje držíme
 
 - Údaje účtu a obsah: po dobu existence účtu.
-- Po zrušení účtu smažeme údaje do **[30 dní]**, zálohy do **[90 dní]**.
-- Technické záznamy: **[14 dní]**.
+- Po zrušení účtu smažeme údaje do 30 dní, zálohy do 90 dní.
+- Technické záznamy: 14 dní.
+
+<!-- TODO: ověřit lhůty mazání podle skutečného provozu. -->
 
 ## 6. Tvoje práva
 

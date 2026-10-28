@@ -1,7 +1,7 @@
 ---
 title: Podmínky užívání
 description: Pravidla pro používání služby Trasio.
-validFrom: '[datum]'
+# TODO: doplnit datum platnosti (validFrom).
 draft: true
 ---
 
@@ -9,8 +9,10 @@ draft: true
 
 Službu Trasio (web [gotrasio.cz](https://gotrasio.cz), aplikace
 [app.gotrasio.cz](https://app.gotrasio.cz) a aplikace pro Android)
-provozuje soukromá osoba **[jméno a příjmení]** jako nekomerční projekt,
-nikoli jako podnikatel (dále „provozovatel“). Kontakt: **[e-mail]**.
+provozuje soukromá osoba jako nekomerční projekt, nikoli jako podnikatel
+(dále „provozovatel“).
+
+<!-- TODO: doplnit jméno a příjmení provozovatele a kontaktní e-mail. -->
 
 ## 2. Co služba nabízí
 
@@ -49,7 +51,8 @@ na trase odpovídáš sám.
 - Veřejný nebo sdílený obsah nám dovoluješ zobrazit ostatním uživatelům
   v rozsahu, který sám nastavíš.
 - Návrhy úprav míst můžeme po kontrole použít ve sdílené databázi míst.
-  **[licence příspěvků — doplnit]**
+
+<!-- TODO: doplnit licenci příspěvků. -->
 
 ## 6. Nevkládej důvěrné informace
 
@@ -76,9 +79,11 @@ v ní. V rozsahu, který zákon dovoluje, neodpovídá za žádné škody vznikl
 používáním služby, zejména za škody vzniklé nepřesností jízdních řádů, map
 nebo údajů o místech, výpadkem služby nebo ztrátou dat. Důležité plány si
 proto zálohuj, například exportem do GPX.
-**[rozsah omezení odpovědnosti — ověřit u právníka]**
+
+<!-- TODO: rozsah omezení odpovědnosti ověřit u právníka. -->
 
 ## 10. Závěrečná ustanovení
 
-Tyto podmínky se řídí právem České republiky. **[Řešení sporů, ADR,
-příslušný soud — doplnit.]**
+Tyto podmínky se řídí právem České republiky.
+
+<!-- TODO: doplnit řešení sporů, ADR a příslušný soud. -->

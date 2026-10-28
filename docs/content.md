@@ -17,8 +17,10 @@ adds a translation in brackets, because the app is Czech only for now.
 
 `src/content/legal/<lang>/{terms,privacy,cookies}.md`. Front matter:
 `title`, `description`, `validFrom`, `draft`. A draft shows a warning box.
-Values in `[square brackets]` must be filled in before launch. The Czech
-text is the binding one.
+Without `validFrom` the page shows no date. What must be filled in before
+launch is marked with `TODO` comments (`<!-- TODO: … -->` in Markdown,
+`# TODO` in front matter), never in the visible text. The Czech text is the
+binding one.
 
 ## Licenses
 

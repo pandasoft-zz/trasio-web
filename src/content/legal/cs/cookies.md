@@ -1,7 +1,7 @@
 ---
 title: Cookies
 description: Jaké cookies a úložiště používá web a aplikace Trasio.
-validFrom: '[datum]'
+# TODO: doplnit datum platnosti (validFrom).
 draft: true
 ---
 
@@ -16,9 +16,11 @@ Aplikace používá jen technicky nutná úložiště:
 
 | Název | Typ | Účel | Doba |
 |---|---|---|---|
-| Přihlášení (Zitadel) | cookie | Přihlášení k účtu | relace / **[doba]** |
+| Přihlášení (Zitadel) | cookie | Přihlášení k účtu | po dobu relace |
 | Tokeny přihlášení | úložiště prohlížeče | Udržení přihlášení | do odhlášení |
 | Nastavení mapy | úložiště prohlížeče | Poslední výřez, vrstvy, filtr | trvale v prohlížeči |
 
 Nutná úložiště nevyžadují souhlas. Reklamní ani sledovací cookies
-nepoužíváme. **[Ověřit úplný seznam podle aplikace.]**
+nepoužíváme.
+
+<!-- TODO: ověřit dobu platnosti cookie Zitadel a úplný seznam úložišť podle aplikace. -->

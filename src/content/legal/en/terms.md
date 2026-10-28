@@ -1,7 +1,7 @@
 ---
 title: Terms of use
 description: Rules for using the Trasio service.
-validFrom: '[date]'
+# TODO: add the valid-from date (validFrom).
 draft: true
 ---
 
@@ -11,8 +11,10 @@ draft: true
 
 The Trasio service (the website [gotrasio.cz](https://gotrasio.cz), the app
 [app.gotrasio.cz](https://app.gotrasio.cz) and the Android app) is run by a
-private person, **[first and last name]**, as a non-commercial project, not
-as a business (the "operator"). Contact: **[e-mail]**.
+private person as a non-commercial project, not as a business (the
+"operator").
+
+<!-- TODO: add the operator's first and last name and contact e-mail. -->
 
 ## 2. What the service does
 
@@ -52,7 +54,9 @@ responsible for your own safety on the route.
 - You allow us to show public or shared content to other users, in the
   scope you set.
 - After a review, we can use your place suggestions in the shared place
-  database. **[license of contributions — to fill in]**
+  database.
+
+<!-- TODO: add the license of contributions. -->
 
 ## 6. Do not enter confidential information
 
@@ -79,9 +83,11 @@ complete or available. As far as the law allows, the operator is not liable
 for any damage from using the service, in particular damage caused by wrong
 timetables, maps or place data, by service outages or by loss of data. So
 keep a backup of important plans, for example as a GPX export.
-**[scope of liability — to check with a lawyer]**
+
+<!-- TODO: check the scope of liability with a lawyer. -->
 
 ## 10. Final provisions
 
-These terms follow the law of the Czech Republic. **[Dispute resolution,
-ADR, court — to fill in.]**
+These terms follow the law of the Czech Republic.
+
+<!-- TODO: add dispute resolution, ADR and the competent court. -->

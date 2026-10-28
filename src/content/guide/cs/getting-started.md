@@ -36,13 +36,12 @@ hodnotit místa a sdílet výlety s ostatními. Přihlásíš se tlačítkem
 Počet uložených výletů je omezený. Je to ochrana služby proti zneužití,
 ne placená funkce. Každý účet má svou úroveň:
 
-| Úroveň | Uložené výlety | Podkladová mapa Mapy.cz |
-|---|---|---|
-| **Free** | 20 | ne |
-| **Pro** | 1 000 | ne |
-| **Unlimited** | bez limitu | ano |
+| Úroveň | Uložené výlety |
+|---|---|
+| **Start** | 20 |
+| **Silver** | 1 000 |
 
-Nový účet začíná na úrovni Free. Vyšší úroveň nastavuje provozovatel
+Nový účet začíná na úrovni Start. Vyšší úroveň nastavuje provozovatel
 každému účtu zvlášť. Kolik výletů máš uložených a jakou máš úroveň,
 uvidíš v **Profilu** u položky **Úroveň účtu**.
 

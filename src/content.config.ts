@@ -19,7 +19,7 @@ const legal = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    validFrom: z.string(),
+    validFrom: z.string().optional(),
     draft: z.boolean().default(false),
   }),
 });

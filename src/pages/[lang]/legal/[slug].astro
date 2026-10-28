@@ -25,7 +25,7 @@ const { Content } = await render(entry);
 <Base lang={lang} title={`${entry.data.title} · Trasio`} description={entry.data.description}>
   <div class="container page-head">
     <h1>{entry.data.title}</h1>
-    <p class="meta">{t('legal.updated')}: {entry.data.validFrom}</p>
+    {entry.data.validFrom && <p class="meta">{t('legal.updated')}: {entry.data.validFrom}</p>}
   </div>
   <div class="container body">
     {entry.data.draft && <p class="notice" role="note">{t('legal.draft')}</p>}
