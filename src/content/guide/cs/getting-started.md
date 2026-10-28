@@ -31,6 +31,24 @@ Po přihlášení můžeš ukládat plány a výlety, nahrávat záznamy tras,
 hodnotit místa a sdílet výlety s ostatními. Přihlásíš se tlačítkem
 **Přihlásit se** vlevo dole (v mobilu v dolní liště).
 
+## Úroveň účtu a limit výletů
+
+Počet uložených výletů je omezený. Je to ochrana služby proti zneužití,
+ne placená funkce. Každý účet má svou úroveň:
+
+| Úroveň | Uložené výlety | Podkladová mapa Mapy.cz |
+|---|---|---|
+| **Free** | 20 | ne |
+| **Pro** | 1 000 | ne |
+| **Unlimited** | bez limitu | ano |
+
+Nový účet začíná na úrovni Free. Vyšší úroveň nastavuje provozovatel
+každému účtu zvlášť. Kolik výletů máš uložených a jakou máš úroveň,
+uvidíš v **Profilu** u položky **Úroveň účtu**.
+
+Když limitu dosáhneš, nový výlet už neuložíš. Smaž některé staré výlety,
+nebo požádej o vyšší úroveň. Limity se můžou časem změnit.
+
 ## Hlavní části aplikace
 
 | Část | K čemu je |

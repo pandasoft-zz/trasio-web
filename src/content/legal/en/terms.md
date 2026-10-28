@@ -26,6 +26,11 @@ journeys and place data cover only this area.
 ## 3. Account
 
 - You need an account to save plans and trips.
+- The number of saved trips is limited by the account level. This
+  protects the service from abuse. The operator sets the level for each
+  account one by one and can change the limits. There is no right to a
+  higher level. The levels are listed in the
+  [guide](../../guide/getting-started/).
 - Your account details must be true. Keep your sign-in details safe.
 - You can close your account at any time. We then delete your data as the
   [Privacy policy](../privacy/) says.

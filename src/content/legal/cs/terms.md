@@ -24,6 +24,10 @@ a údaje o místech pokrývají jen toto území.
 ## 3. Účet
 
 - Pro ukládání plánů a výletů je potřeba účet.
+- Počet uložených výletů je podle úrovně účtu omezený. Je to ochrana
+  služby proti zneužití. Úroveň nastavuje provozovatel každému účtu zvlášť
+  a limity může změnit. Na vyšší úroveň není nárok. Přehled úrovní je
+  v [návodu](../../guide/getting-started/).
 - Údaje v účtu musí být pravdivé. Přihlašovací údaje chraň před ostatními.
 - Účet můžeš kdykoli zrušit. Se zrušením účtu smažeme tvoje data podle
   [Zásad ochrany osobních údajů](../privacy/).
