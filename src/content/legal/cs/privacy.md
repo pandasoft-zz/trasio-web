@@ -7,7 +7,8 @@ draft: true
 
 ## 1. Správce
 
-Správcem osobních údajů je **[jméno / firma]**, IČO **[IČO]**, **[adresa]**.
+Správcem osobních údajů je provozovatel služby, soukromá osoba
+**[jméno a příjmení]**.
 Kontakt pro otázky k osobním údajům: **[e-mail]**.
 
 ## 2. Jaké údaje zpracováváme

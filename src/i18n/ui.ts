@@ -42,7 +42,7 @@ const cs = {
     'V Trasiu poskládáš výlet na jeden den i na celý týden: trasu po dnech a etapách, poznámky k bodům, místa po cestě a spojení tam i zpět. Pak ho projdeš a uložíš do archivu.',
   'home.hero.cta': 'Otevřít Trasio',
   'home.hero.secondary': 'Co Trasio umí',
-  'home.hero.note': 'Zdarma na webu a v aplikaci pro Android.',
+  'home.hero.note': 'Zdarma na webu a v aplikaci pro Android. Mapa, spojení a místa pokrývají jen Českou republiku.',
   'home.hero.alt': 'Turistická mapa Trasia s trasami a zastávkami v okolí Brna',
 
   'home.pillars.title': 'Tři věci, jedno místo',
@@ -71,17 +71,20 @@ const cs = {
   'home.places.eyebrow': 'Místa a návštěvy',
   'home.places.title': 'Chceš vidět všechny hrady v okolí Brna?',
   'home.places.text':
-    'Vyfiltruj hrady na mapě, označ je jako Chci navštívit a postupně je odškrtávej. Trasio si pamatuje, kde jsi byl a s jakým výletem.',
+    'Vyber si, co chceš vidět. Vyfiltruj hrady na mapě, ulož si je do seznamu Chci navštívit a postupně je odškrtávej. Trasio si pamatuje, kde jsi byl a s jakým výletem.',
   'home.places.b1': 'Hrady, zříceniny, rozhledny, jeskyně, koupaliště, pivovary a další typy.',
-  'home.places.b2': 'Chci navštívit a Navštíveno — na mapě i v seznamu.',
+  'home.places.b2': 'Vlastní seznam Chci navštívit: tvoje cíle na mapě i v seznamu. Co projdeš, označíš jako Navštíveno.',
   'home.places.b3': 'Vlastní hodnocení a soukromá poznámka ke každému místu.',
   'home.places.b4': 'Z místa rovnou Spojení sem, nebo Přidat do trasy.',
   'home.places.alt': 'Detail místa: hrad Valdštejn s hodnocením a stavem Navštíveno',
 
   'home.journeys.eyebrow': 'Hledání spojení',
-  'home.journeys.title': 'Jen spojení? Taky jde.',
+  'home.journeys.title': 'Najde spojení, které jinde neuvidíš',
   'home.journeys.text':
-    'Hledání spojení funguje i samostatně, bez účtu. Nastavíš, kolik chceš jít pěšky, a Trasio hledá i zastávky v tomto okruhu, nejen tu nejbližší. Delší chůze často znamená rychlejší vlak místo autobusu.',
+    'Běžné vyhledávače začínají na nejbližší zastávce. Trasio se dívá šíř: prohledá všechny zastávky, ke kterým dojdeš pěšky, a porovná spojení ze všech. Často tak najde rychlejší cestu, než jakou ti nabídnou jinde. Funguje i samostatně, bez účtu.',
+  'home.journeys.b1': 'Ty určíš, kolik chceš jít pěšky. Trasio hledá ve všech zastávkách v tomto okruhu.',
+  'home.journeys.b2': 'Deset minut chůze navíc často znamená rychlý vlak místo pomalého autobusu.',
+  'home.journeys.b3': 'Funguje i do přírody: k hradu, rozhledně nebo na začátek trasy, ne jen na zastávku.',
   'home.journeys.alt': 'Spojení z Brna na hrad Pernštejn s pěšími úseky a mapou',
 
   'home.together.title': 'Nejlepší je to dohromady',
@@ -109,7 +112,15 @@ const cs = {
 
   'home.open.title': 'Postaveno na otevřených datech',
   'home.open.text':
-    'Jízdní řády, mapa i výšková data pocházejí z otevřených zdrojů. Celý systém běží na svobodném softwaru.',
+    'Jízdní řády, mapa i výšková data pocházejí z otevřených zdrojů. Celý systém běží na svobodném softwaru. Co jsme pro Trasio postavili sami, dáváme zpátky jako open source, aby to mohl použít i někdo další.',
+  'home.open.map.title': 'Vlastní turistická a topografická mapa',
+  'home.open.map.text':
+    'Mapu si Trasio vykresluje samo. Je to turistická a topografická mapa Česka se stínovaným reliéfem, vrstevnicemi po 10 metrech, značenými trasami KČT a cyklotrasami. Vzniká z OpenStreetMap a lidarových výškových dat. Celý postup výroby je open source.',
+  'home.open.map.link': 'Czech Tourist Map',
+  'home.open.motis.title': 'Hotový server pro hledání spojení',
+  'home.open.motis.text':
+    'Spojení hledá MOTIS. Pro něj chystáme balíčky s daty české veřejné dopravy: vlaky, celostátní a regionální autobusy, PID a IDS JMK. Každý týden se sestaví znovu. Stačí jeden příkaz docker run a máš vlastní vyhledávač spojení pro celé Česko. Licence MIT.',
+  'home.open.motis.link': 'motis-bundles',
   'home.open.link': 'Licence a zdroje dat',
 
   'home.cta.title': 'Kam vyrazíš o víkendu?',
@@ -170,7 +181,7 @@ const en: Record<UiKey, string> = {
     'In Trasio you build a trip for one day or a whole week: the route by days and stages, notes on points, places along the way and journeys there and back. Then you walk it and keep it in your archive.',
   'home.hero.cta': 'Open Trasio',
   'home.hero.secondary': 'What Trasio does',
-  'home.hero.note': 'Free on the web and in the Android app.',
+  'home.hero.note': 'Free on the web and in the Android app. The map, journeys and places cover only the Czech Republic.',
   'home.hero.alt': 'Trasio hiking map with routes and stops near Brno',
 
   'home.pillars.title': 'Three things, one place',
@@ -199,17 +210,20 @@ const en: Record<UiKey, string> = {
   'home.places.eyebrow': 'Places and visits',
   'home.places.title': 'Want to see all the castles around Brno?',
   'home.places.text':
-    'Filter castles on the map, mark them as Want to visit and tick them off one by one. Trasio remembers where you have been and on which trip.',
+    'Choose what you want to see. Filter castles on the map, save them to your Want to visit list and tick them off one by one. Trasio remembers where you have been and on which trip.',
   'home.places.b1': 'Castles, ruins, lookout towers, caves, pools, breweries and more.',
-  'home.places.b2': 'Want to visit and Visited — on the map and in the list.',
+  'home.places.b2': 'Your own Want to visit list: your goals on the map and in the list. What you see, you mark as Visited.',
   'home.places.b3': 'Your own rating and a private note for every place.',
   'home.places.b4': 'From a place go straight to Journey here or Add to route.',
   'home.places.alt': 'Place detail: Valdštejn castle with a rating and the Visited state',
 
   'home.journeys.eyebrow': 'Journey search',
-  'home.journeys.title': 'Just a journey? That works too.',
+  'home.journeys.title': 'Finds journeys you will not see elsewhere',
   'home.journeys.text':
-    'Journey search also works on its own, without an account. You set how far you want to walk, and Trasio also looks for stops in this radius, not only the nearest one. A longer walk often means a faster train instead of a bus.',
+    'Common journey planners start at the nearest stop. Trasio looks wider: it searches all stops you can walk to and compares journeys from all of them. So it often finds a faster way than you get elsewhere. It also works on its own, without an account.',
+  'home.journeys.b1': 'You decide how far you want to walk. Trasio searches all stops in this radius.',
+  'home.journeys.b2': 'Ten more minutes on foot often means a fast train instead of a slow bus.',
+  'home.journeys.b3': 'It also works into nature: to a castle, a lookout tower or the start of a route, not only to a stop.',
   'home.journeys.alt': 'A journey from Brno to Pernštejn castle with walking legs and a map',
 
   'home.together.title': 'Best when it comes together',
@@ -237,7 +251,15 @@ const en: Record<UiKey, string> = {
 
   'home.open.title': 'Built on open data',
   'home.open.text':
-    'Timetables, the map and elevation data come from open sources. The whole system runs on free software.',
+    'Timetables, the map and elevation data come from open sources. The whole system runs on free software. What we built for Trasio ourselves, we give back as open source, so others can use it too.',
+  'home.open.map.title': 'Our own hiking and topographic map',
+  'home.open.map.text':
+    'Trasio renders its own map. It is a hiking and topographic map of Czechia with relief shading, contour lines every 10 metres, marked KČT hiking trails and cycling routes. It is made from OpenStreetMap and lidar elevation data. The whole build is open source.',
+  'home.open.map.link': 'Czech Tourist Map',
+  'home.open.motis.title': 'A ready-to-run journey planner',
+  'home.open.motis.text':
+    'Journeys are found by MOTIS. We build images of it with Czech public transport data: trains, national and regional buses, Prague (PID) and South Moravian (IDS JMK) transport. They are rebuilt every week. One docker run command gives you your own journey planner for all of Czechia. MIT license.',
+  'home.open.motis.link': 'motis-bundles',
   'home.open.link': 'Licenses and data sources',
 
   'home.cta.title': 'Where will you go this weekend?',

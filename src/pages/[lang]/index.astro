@@ -6,6 +6,8 @@ import Route from '@lucide/astro/icons/route';
 import Check from '@lucide/astro/icons/check';
 import Watch from '@lucide/astro/icons/watch';
 import ArrowRight from '@lucide/astro/icons/arrow-right';
+import Mountain from '@lucide/astro/icons/mountain';
+import TrainFront from '@lucide/astro/icons/train-front';
 import Base from '../../layouts/Base.astro';
 import JourneyBar from '../../components/JourneyBar.astro';
 import { APP_URL, langPaths, localePath, useTranslations, type Locale, type UiKey } from '../../i18n/ui';
@@ -27,8 +29,14 @@ const pillars = [
   { icon: Route, key: 'journeys', href: '#journeys', main: false },
 ] as const;
 
+const openProjects = [
+  { icon: Mountain, key: 'map', href: 'https://pandasoft-zz.github.io/CzechTouristMap/' },
+  { icon: TrainFront, key: 'motis', href: 'https://github.com/pandasoft-zz/motis-bundles' },
+] as const;
+
 const planBullets = ['b1', 'b2', 'b3', 'b4', 'b5', 'b6'].map((b) => `home.plan.${b}` as UiKey);
 const placeBullets = ['b1', 'b2', 'b3', 'b4'].map((b) => `home.places.${b}` as UiKey);
+const journeyBullets = ['b1', 'b2', 'b3'].map((b) => `home.journeys.${b}` as UiKey);
 const androidBullets = ['b1', 'b2', 'b3'].map((b) => `home.android.${b}` as UiKey);
 const steps = [1, 2, 3, 4] as const;
 ---
@@ -144,6 +152,16 @@ const steps = [1, 2, 3, 4] as const;
         <span class="eyebrow">{t('home.journeys.eyebrow')}</span>
         <h2>{t('home.journeys.title')}</h2>
         <p class="lead">{t('home.journeys.text')}</p>
+        <ul class="checks">
+          {
+            journeyBullets.map((k) => (
+              <li>
+                <Check size={18} aria-hidden="true" />
+                {t(k)}
+              </li>
+            ))
+          }
+        </ul>
         <JourneyBar />
       </div>
       <Image
@@ -205,11 +223,27 @@ const steps = [1, 2, 3, 4] as const;
 
   <section class="section">
     <div class="container open card">
-      <div>
-        <h2>{t('home.open.title')}</h2>
-        <p>{t('home.open.text')}</p>
+      <div class="open-head">
+        <div>
+          <h2>{t('home.open.title')}</h2>
+          <p>{t('home.open.text')}</p>
+        </div>
+        <a class="btn btn-ghost" href={localePath(lang, 'licenses/')}>{t('home.open.link')}</a>
       </div>
-      <a class="btn btn-ghost" href={localePath(lang, 'licenses/')}>{t('home.open.link')}</a>
+      <div class="open-projects">
+        {
+          openProjects.map((p) => (
+            <div class="open-project">
+              <p.icon size={24} aria-hidden="true" />
+              <h3>{t(`home.open.${p.key}.title` as UiKey)}</h3>
+              <p>{t(`home.open.${p.key}.text` as UiKey)}</p>
+              <a href={p.href}>
+                {t(`home.open.${p.key}.link` as UiKey)} <ArrowRight size={16} aria-hidden="true" />
+              </a>
+            </div>
+          ))
+        }
+      </div>
     </div>
   </section>
 
@@ -467,12 +501,15 @@ const steps = [1, 2, 3, 4] as const;
   }
 
   .open {
+    padding: 32px;
+  }
+
+  .open-head {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 24px;
-    padding: 32px;
   }
 
   .open p {
@@ -482,6 +519,39 @@ const steps = [1, 2, 3, 4] as const;
   }
 
   .open .btn {
+    color: var(--color-primary);
+  }
+
+  .open-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: 24px;
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .open-project {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    color: var(--color-primary);
+  }
+
+  .open-project h3 {
+    margin: 4px 0 0;
+    font-size: 1.15rem;
+    color: var(--color-text);
+  }
+
+  .open-project a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: auto;
+    padding-top: 4px;
+    font-weight: 600;
     color: var(--color-primary);
   }
 

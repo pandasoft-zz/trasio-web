@@ -9,8 +9,8 @@ draft: true
 
 ## 1. Controller
 
-The controller of personal data is **[name / company]**, company ID
-**[ID]**, **[address]**. Contact for privacy questions: **[e-mail]**.
+The controller of personal data is the operator of the service, a private
+person, **[first and last name]**. Contact for privacy questions: **[e-mail]**.
 
 ## 2. Which data we process
 
