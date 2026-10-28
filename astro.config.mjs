@@ -16,6 +16,8 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
+      // The root page only redirects to a language, so it is not listed.
+      filter: (page) => page !== 'https://gotrasio.cz/',
       i18n: {
         defaultLocale,
         locales: Object.fromEntries(locales.map((l) => [l, l])),
