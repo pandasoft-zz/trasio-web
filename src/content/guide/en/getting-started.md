@@ -39,13 +39,12 @@ and share trips. Sign in with **Přihlásit se** (Sign in) at the bottom left
 The number of saved trips is limited. This protects the service from
 abuse; it is not a paid feature. Every account has a level:
 
-| Level | Saved trips | Mapy.cz base map |
-|---|---|---|
-| **Free** | 20 | no |
-| **Pro** | 1,000 | no |
-| **Unlimited** | no limit | yes |
+| Level | Saved trips |
+|---|---|
+| **Start** | 20 |
+| **Silver** | 1,000 |
 
-A new account starts at Free. The operator sets a higher level for each
+A new account starts at Start. The operator sets a higher level for each
 account one by one. You can see how many trips you have saved and your
 level in **Profil** (Profile) under **Úroveň účtu** (Account level).
 
