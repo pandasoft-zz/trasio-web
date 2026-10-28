@@ -73,7 +73,8 @@ export const data: LicenseItem[] = [
       cs: 'Jízdní řády integrovaných systémů Praha a Jihomoravský kraj.',
       en: 'Timetables of the Prague and South Moravian integrated systems.',
     },
-    license: '[ověřit / verify]',
+    // TODO: verify the license of the PID and IDS JMK data.
+    license: '—',
   },
   {
     name: 'Mapy.cz API (Seznam.cz)',
@@ -134,7 +135,8 @@ export const software: LicenseItem[] = [
       cs: 'Naše turistická a topografická mapa (PMTiles a styl MapLibre).',
       en: 'Our hiking and topographic map (PMTiles and a MapLibre style).',
     },
-    license: '[doplnit / add]',
+    // TODO: add the license once the repository has one.
+    license: '—',
   },
   {
     name: 'MapLibre GL JS',

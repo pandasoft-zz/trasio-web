@@ -1,7 +1,7 @@
 ---
 title: Privacy policy
 description: Which personal data Trasio processes and why.
-validFrom: '[date]'
+# TODO: add the valid-from date (validFrom).
 draft: true
 ---
 
@@ -10,7 +10,9 @@ draft: true
 ## 1. Controller
 
 The controller of personal data is the operator of the service, a private
-person, **[first and last name]**. Contact for privacy questions: **[e-mail]**.
+person.
+
+<!-- TODO: add the controller's first and last name and contact e-mail. -->
 
 ## 2. Which data we process
 
@@ -36,19 +38,21 @@ to you.
 
 ## 4. Who processes data for us
 
+<!-- TODO: add the server and e-mail providers and the country where they process data. -->
+
 | Processor | Purpose | Where |
 |---|---|---|
-| **[server provider]** | Server and database | **[country]** |
 | Cloudflare, Inc. | Website delivery, attack protection | EU / USA (standard contractual clauses) |
-| **[e-mail provider]** | Account e-mails | **[country]** |
 | Seznam.cz, a.s. (Mapy.cz API) | Walking and cycling routes — gets only point coordinates, no data about you | Czechia |
 
 ## 5. How long we keep data
 
 - Account data and content: while the account exists.
-- After you close the account we delete data within **[30 days]**, backups
-  within **[90 days]**.
-- Technical logs: **[14 days]**.
+- After you close the account we delete data within 30 days, backups
+  within 90 days.
+- Technical logs: 14 days.
+
+<!-- TODO: check the deletion periods against the real setup. -->
 
 ## 6. Your rights
 

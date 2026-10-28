@@ -144,7 +144,7 @@ const cs = {
   'licenses.license': 'Licence',
 
   'legal.draft':
-    'Návrh textu. Před spuštěním ho musí zkontrolovat právník. Údaje v [hranatých závorkách] je třeba doplnit.',
+    'Návrh textu. Před spuštěním ho musí zkontrolovat právník.',
   'legal.updated': 'Platné od',
 
   'notFound.title': 'Stránka nenalezena',
@@ -283,7 +283,7 @@ const en: Record<UiKey, string> = {
   'licenses.license': 'License',
 
   'legal.draft':
-    'Draft text. A lawyer must check it before launch. Values in [square brackets] must be filled in.',
+    'Draft text. A lawyer must check it before launch.',
   'legal.updated': 'Valid from',
 
   'notFound.title': 'Page not found',
