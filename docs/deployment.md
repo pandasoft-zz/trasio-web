@@ -34,3 +34,14 @@ Routes). `app.`, `api.` and `auth.gotrasio.cz` stay with the app.
 `public/_headers` sets security headers (CSP without third-party hosts) and
 a long cache for `/_astro/*`, whose file names contain a hash. Unknown paths
 get `dist/404.html` (`not_found_handling`).
+
+## Dependency updates
+
+Renovate (`renovate.json`) opens pull requests for npm packages, Node and
+GitHub Actions. Minor and patch updates merge themselves when CI is green;
+majors and 0.x versions wait for a human. A merge to `main` deploys, so an
+automerged update goes live without a human.
+
+GitHub auto-merge needs a ruleset on `main` (Settings › Rules › Rulesets)
+with the required check `build`, and "Allow auto-merge" on in Settings ›
+General.
