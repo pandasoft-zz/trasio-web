@@ -1,7 +1,7 @@
 ---
 title: Podmínky užívání
 description: Pravidla pro používání služby Trasio.
-# TODO: doplnit datum platnosti (validFrom).
+validFrom: "12. 11. 2026"
 draft: false
 ---
 
@@ -59,6 +59,9 @@ na trase odpovídáš sám.
   míst, poskytuješ pod licencí
   [Open Database License (ODbL) 1.0](https://opendatacommons.org/licenses/odbl/1-0/).
   Je to stejná licence, jakou má OpenStreetMap.
+- Provozovatel si vyhrazuje právo přijatá místa a jejich opravy předat do
+  projektu [OpenStreetMap](https://www.openstreetmap.org). Návrh proto
+  neposílej, pokud jsi údaje převzal ze zdroje, který to nedovoluje.
 - **Veřejné výlety** (volba Veřejný) poskytuješ pod licencí
   [Creative Commons Uveďte původ-Zachovejte licenci 4.0 (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.cs).
   Ostatní je smějí použít a upravit, když uvedou autora a sdílí je pod

@@ -1,8 +1,8 @@
 ---
 title: Ochrana osobních údajů
 description: Jaké osobní údaje Trasio zpracovává a proč.
-# TODO: doplnit datum platnosti (validFrom).
-draft: true
+validFrom: "12. 11. 2026"
+draft: false
 ---
 
 ## 1. Správce
@@ -35,21 +35,20 @@ Hledání spojení funguje bez účtu. Zadaná místa k tobě nepřiřazujeme.
 
 ## 4. Kdo údaje zpracovává za nás
 
-<!-- TODO: doplnit poskytovatele e-mailu a stát, kde údaje zpracovává. -->
-
 | Zpracovatel | Účel | Kde |
 |---|---|---|
-| Contabo GmbH | Server a databáze služby | EU |
+| Contabo GmbH | Server, databáze a e-mail služby | EU |
 | Cloudflare, Inc. | Doručení webu, ochrana proti útokům | EU / USA (standardní smluvní doložky) |
 | Seznam.cz, a.s. (Mapy.cz API) | Výpočet pěších a cyklo tras — dostává jen souřadnice bodů, ne údaje o tobě | ČR |
 
 ## 5. Jak dlouho údaje držíme
 
-- Údaje účtu a obsah: po dobu existence účtu.
-- Po zrušení účtu smažeme údaje do 30 dní, zálohy do 90 dní.
-- Technické záznamy: 14 dní.
+Lhůty níže jsou nejdelší možné a závazné. Údaje obvykle mažeme dřív.
 
-<!-- TODO: ověřit lhůty mazání podle skutečného provozu. -->
+- Údaje účtu a obsah: po dobu existence účtu.
+- Po zrušení účtu smažeme údaje nejpozději do 30 dní, zálohy nejpozději
+  do 90 dní.
+- Technické záznamy: nejvýše 14 dní.
 
 ## 6. Tvoje práva
 

@@ -1,7 +1,7 @@
 ---
 title: Terms of use
 description: Rules for using the Trasio service.
-# TODO: add the valid-from date (validFrom).
+validFrom: "12 November 2026"
 draft: false
 ---
 
@@ -63,6 +63,9 @@ responsible for your own safety on the route.
   database after a review are under the
   [Open Database License (ODbL) 1.0](https://opendatacommons.org/licenses/odbl/1-0/).
   This is the same license as OpenStreetMap has.
+- The operator reserves the right to give accepted places and their fixes
+  to the [OpenStreetMap](https://www.openstreetmap.org) project. So do not
+  send a suggestion with data from a source that does not allow this.
 - **Public trips** (the Public option) are under the
   [Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)
   license. Others can use and change them if they name the author and share

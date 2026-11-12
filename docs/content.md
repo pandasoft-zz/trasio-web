@@ -17,8 +17,9 @@ adds a translation in brackets, because the app is Czech only for now.
 
 `src/content/legal/<lang>/{terms,privacy,cookies}.md`. Front matter:
 `title`, `description`, `validFrom`, `draft`. A draft shows a warning box.
-Without `validFrom` the page shows no date. What must be filled in before
-launch is marked with `TODO` comments (`<!-- TODO: … -->` in Markdown,
+`validFrom` is shown as written, so write it in the page language
+(`12. 11. 2026`, `12 November 2026`). Without `validFrom` the page shows no
+date. What is still open is marked with `TODO` comments (`<!-- TODO: … -->` in Markdown,
 `# TODO` in front matter), never in the visible text. The Czech text is the
 binding one.
 

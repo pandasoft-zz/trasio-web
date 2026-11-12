@@ -1,8 +1,8 @@
 ---
 title: Privacy policy
 description: Which personal data Trasio processes and why.
-# TODO: add the valid-from date (validFrom).
-draft: true
+validFrom: "12 November 2026"
+draft: false
 ---
 
 > The Czech version of this document is the binding one.
@@ -39,22 +39,21 @@ to you.
 
 ## 4. Who processes data for us
 
-<!-- TODO: add the e-mail provider and the country where it processes data. -->
-
 | Processor | Purpose | Where |
 |---|---|---|
-| Contabo GmbH | Server and database of the service | EU |
+| Contabo GmbH | Server, database and e-mail of the service | EU |
 | Cloudflare, Inc. | Website delivery, attack protection | EU / USA (standard contractual clauses) |
 | Seznam.cz, a.s. (Mapy.cz API) | Walking and cycling routes — gets only point coordinates, no data about you | Czechia |
 
 ## 5. How long we keep data
 
-- Account data and content: while the account exists.
-- After you close the account we delete data within 30 days, backups
-  within 90 days.
-- Technical logs: 14 days.
+The periods below are the longest possible and they are binding. We
+usually delete data sooner.
 
-<!-- TODO: check the deletion periods against the real setup. -->
+- Account data and content: while the account exists.
+- After you close the account we delete data within 30 days at the latest,
+  backups within 90 days at the latest.
+- Technical logs: 14 days at the most.
 
 ## 6. Your rights
 
