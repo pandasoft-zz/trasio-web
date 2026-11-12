@@ -35,6 +35,7 @@ line with the attribution in the app and the sources in
 | File | Source |
 |---|---|
 | `web-connections.jpg`, `web-map.jpg`, `mobile-connections.png` | Screenshots of app.gotrasio.cz (Playwright, 2× / 3× scale) |
+| `guide-*.jpg` | Screenshots of the stage app (trasio-stage.pandasoft.cz) with the test account, Playwright, 1280×800 at 2× scale (the trip list at 1440×900). The example trip is "Pernštejn z Nedvědice". |
 | `design-trip-detail.jpg` | `trasio/docs/design_handoff_vylety/screenshots/` |
 | `design-stage-points.png` | `trasio/docs/design_handoff_body_etapy/screenshots/` (cropped) |
 | `design-android-place.png` | `trasio-android/docs/design_handoff_android_v2/screenshots/` (cropped) |

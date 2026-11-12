@@ -46,7 +46,8 @@ abuse; it is not a paid feature. Every account has a level:
 
 A new account starts at Start. The operator sets a higher level for each
 account one by one. You can see how many trips you have saved and your
-level in **Profil** (Profile) under **Úroveň účtu** (Account level).
+level in **Profil** (Profile), in the **Účet** (Account) part, for
+example "Start · 3 z 20 uložených výletů" (Start · 3 of 20 saved trips).
 
 When you reach the limit, you cannot save a new trip. Delete some old
 trips, or ask for a higher level. The limits can change over time.
@@ -57,6 +58,6 @@ trips, or ask for a higher level. The limits can change over time.
 |---|---|
 | **Mapa** (Map) | Your trips, places and stops on the map. New trips start here. |
 | **Výlety** (Trips) | List of trips: New, Walked, Archive. |
-| **Místa** (Places) | List of places with ratings, and the places you visited. |
+| **Místa** (Places) | List of places with ratings, and your places: visits, want to visit, proposals. |
 | **Spojení** (Journeys) | Public transport journey search. |
-| **Profil** (Profile) | Settings, home point, preferred trip day. |
+| **Profil** (Profile) | Account level, walking speed, preferred trip day, your places and place types on the map. Open it with a click on your name at the bottom left. |
