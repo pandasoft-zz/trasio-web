@@ -9,7 +9,8 @@ draft: true
 
 Správcem osobních údajů je provozovatel služby, soukromá osoba.
 
-<!-- TODO: doplnit jméno a příjmení správce a kontaktní e-mail. -->
+Správce: **Martin Vídeňský**, kontakt:
+[support@pandasoft.cz](mailto:support@pandasoft.cz).
 
 ## 2. Jaké údaje zpracováváme
 
@@ -19,7 +20,7 @@ Správcem osobních údajů je provozovatel služby, soukromá osoba.
 | Plány, výlety, body, poznámky, štítky | Funkce služby | Plnění smlouvy |
 | Záznamy tras (GPX, KML), datum výletu | Archiv výletů, statistika | Plnění smlouvy |
 | Navštívená místa, hodnocení, poznámky k místům | Funkce služby | Plnění smlouvy |
-| Výchozí bod, nastavení profilu | Předvyplnění hledání | Plnění smlouvy |
+| Uložená místa (Moje místa), nastavení profilu | Předvyplnění hledání | Plnění smlouvy |
 | Technické záznamy (IP adresa, čas, chyby) | Provoz a bezpečnost | Oprávněný zájem |
 
 Hledání spojení funguje bez účtu. Zadaná místa k tobě nepřiřazujeme.
@@ -34,10 +35,11 @@ Hledání spojení funguje bez účtu. Zadaná místa k tobě nepřiřazujeme.
 
 ## 4. Kdo údaje zpracovává za nás
 
-<!-- TODO: doplnit poskytovatele serveru a e-mailu a stát, kde údaje zpracovávají. -->
+<!-- TODO: doplnit poskytovatele e-mailu a stát, kde údaje zpracovává. -->
 
 | Zpracovatel | Účel | Kde |
 |---|---|---|
+| Contabo GmbH | Server a databáze služby | EU |
 | Cloudflare, Inc. | Doručení webu, ochrana proti útokům | EU / USA (standardní smluvní doložky) |
 | Seznam.cz, a.s. (Mapy.cz API) | Výpočet pěších a cyklo tras — dostává jen souřadnice bodů, ne údaje o tobě | ČR |
 

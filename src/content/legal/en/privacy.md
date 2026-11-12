@@ -12,7 +12,8 @@ draft: true
 The controller of personal data is the operator of the service, a private
 person.
 
-<!-- TODO: add the controller's first and last name and contact e-mail. -->
+Controller: **Martin Vídeňský**, contact:
+[support@pandasoft.cz](mailto:support@pandasoft.cz).
 
 ## 2. Which data we process
 
@@ -22,7 +23,7 @@ person.
 | Plans, trips, points, notes, tags | Service features | Contract |
 | Track records (GPX, KML), trip date | Trip archive, statistics | Contract |
 | Visited places, ratings, notes on places | Service features | Contract |
-| Home point, profile settings | Prefilled search | Contract |
+| Saved places (My places), profile settings | Prefilled search | Contract |
 | Technical logs (IP address, time, errors) | Operation and security | Legitimate interest |
 
 Journey search works without an account. We do not link the searched places
@@ -38,10 +39,11 @@ to you.
 
 ## 4. Who processes data for us
 
-<!-- TODO: add the server and e-mail providers and the country where they process data. -->
+<!-- TODO: add the e-mail provider and the country where it processes data. -->
 
 | Processor | Purpose | Where |
 |---|---|---|
+| Contabo GmbH | Server and database of the service | EU |
 | Cloudflare, Inc. | Website delivery, attack protection | EU / USA (standard contractual clauses) |
 | Seznam.cz, a.s. (Mapy.cz API) | Walking and cycling routes — gets only point coordinates, no data about you | Czechia |
 

@@ -14,7 +14,8 @@ The Trasio service (the website [gotrasio.cz](https://gotrasio.cz), the app
 private person as a non-commercial project, not as a business (the
 "operator").
 
-<!-- TODO: add the operator's first and last name and contact e-mail. -->
+Operator: **Martin Vídeňský**, contact:
+[support@pandasoft.cz](mailto:support@pandasoft.cz).
 
 ## 2. What the service does
 
@@ -56,7 +57,20 @@ responsible for your own safety on the route.
 - After a review, we can use your place suggestions in the shared place
   database.
 
-<!-- TODO: add the license of contributions. -->
+### License of contributions
+
+- **Place suggestions and fixes** that we accept into the shared place
+  database after a review are under the
+  [Open Database License (ODbL) 1.0](https://opendatacommons.org/licenses/odbl/1-0/).
+  This is the same license as OpenStreetMap has.
+- **Public trips** (the Public option) are under the
+  [Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)
+  license. Others can use and change them if they name the author and share
+  them under the same license.
+- Private trips, trips shared by link, notes, visits and your ratings are
+  not under any open license.
+- Add only content that you have the rights to. Do not copy other people's
+  texts or photos.
 
 ## 6. Do not enter confidential information
 
@@ -84,10 +98,9 @@ for any damage from using the service, in particular damage caused by wrong
 timetables, maps or place data, by service outages or by loss of data. So
 keep a backup of important plans, for example as a GPX export.
 
-<!-- TODO: check the scope of liability with a lawyer. -->
-
 ## 10. Final provisions
 
 These terms follow the law of the Czech Republic.
 
-<!-- TODO: add dispute resolution, ADR and the competent court. -->
+Send questions and complaints to
+[support@pandasoft.cz](mailto:support@pandasoft.cz).
