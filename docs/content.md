@@ -17,8 +17,9 @@ adds a translation in brackets, because the app is Czech only for now.
 
 `src/content/legal/<lang>/{terms,privacy,cookies}.md`. Front matter:
 `title`, `description`, `validFrom`, `draft`. A draft shows a warning box.
-Without `validFrom` the page shows no date. What must be filled in before
-launch is marked with `TODO` comments (`<!-- TODO: … -->` in Markdown,
+`validFrom` is shown as written, so write it in the page language
+(`12. 11. 2026`, `12 November 2026`). Without `validFrom` the page shows no
+date. What is still open is marked with `TODO` comments (`<!-- TODO: … -->` in Markdown,
 `# TODO` in front matter), never in the visible text. The Czech text is the
 binding one.
 
@@ -35,6 +36,7 @@ line with the attribution in the app and the sources in
 | File | Source |
 |---|---|
 | `web-connections.jpg`, `web-map.jpg`, `mobile-connections.png` | Screenshots of app.gotrasio.cz (Playwright, 2× / 3× scale) |
+| `guide-*.jpg` | Screenshots of the stage app (trasio-stage.pandasoft.cz) with the test account, Playwright, 1280×800 at 2× scale (the trip list at 1440×900). The example trip is "Pernštejn z Nedvědice". |
 | `design-trip-detail.jpg` | `trasio/docs/design_handoff_vylety/screenshots/` |
 | `design-stage-points.png` | `trasio/docs/design_handoff_body_etapy/screenshots/` (cropped) |
 | `design-android-place.png` | `trasio-android/docs/design_handoff_android_v2/screenshots/` (cropped) |

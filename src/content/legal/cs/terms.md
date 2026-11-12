@@ -1,8 +1,8 @@
 ---
 title: Podmínky užívání
 description: Pravidla pro používání služby Trasio.
-# TODO: doplnit datum platnosti (validFrom).
-draft: true
+validFrom: "12. 11. 2026"
+draft: false
 ---
 
 ## 1. Kdo službu provozuje
@@ -12,7 +12,8 @@ Službu Trasio (web [gotrasio.cz](https://gotrasio.cz), aplikace
 provozuje soukromá osoba jako nekomerční projekt, nikoli jako podnikatel
 (dále „provozovatel“).
 
-<!-- TODO: doplnit jméno a příjmení provozovatele a kontaktní e-mail. -->
+Provozovatel: **Martin Vídeňský**, kontakt:
+[support@pandasoft.cz](mailto:support@pandasoft.cz).
 
 ## 2. Co služba nabízí
 
@@ -52,7 +53,23 @@ na trase odpovídáš sám.
   v rozsahu, který sám nastavíš.
 - Návrhy úprav míst můžeme po kontrole použít ve sdílené databázi míst.
 
-<!-- TODO: doplnit licenci příspěvků. -->
+### Licence příspěvků
+
+- **Návrhy a opravy míst**, které po kontrole přijmeme do sdílené databáze
+  míst, poskytuješ pod licencí
+  [Open Database License (ODbL) 1.0](https://opendatacommons.org/licenses/odbl/1-0/).
+  Je to stejná licence, jakou má OpenStreetMap.
+- Provozovatel si vyhrazuje právo přijatá místa a jejich opravy předat do
+  projektu [OpenStreetMap](https://www.openstreetmap.org). Návrh proto
+  neposílej, pokud jsi údaje převzal ze zdroje, který to nedovoluje.
+- **Veřejné výlety** (volba Veřejný) poskytuješ pod licencí
+  [Creative Commons Uveďte původ-Zachovejte licenci 4.0 (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.cs).
+  Ostatní je smějí použít a upravit, když uvedou autora a sdílí je pod
+  stejnou licencí.
+- Soukromé výlety, výlety sdílené odkazem, poznámky, návštěvy a tvoje
+  hodnocení pod žádnou otevřenou licencí nejsou.
+- Vkládej jen obsah, ke kterému máš práva. Nekopíruj cizí texty ani
+  fotky.
 
 ## 6. Nevkládej důvěrné informace
 
@@ -80,10 +97,9 @@ používáním služby, zejména za škody vzniklé nepřesností jízdních ř�
 nebo údajů o místech, výpadkem služby nebo ztrátou dat. Důležité plány si
 proto zálohuj, například exportem do GPX.
 
-<!-- TODO: rozsah omezení odpovědnosti ověřit u právníka. -->
-
 ## 10. Závěrečná ustanovení
 
 Tyto podmínky se řídí právem České republiky.
 
-<!-- TODO: doplnit řešení sporů, ADR a příslušný soud. -->
+Dotazy a stížnosti posílej na
+[support@pandasoft.cz](mailto:support@pandasoft.cz).

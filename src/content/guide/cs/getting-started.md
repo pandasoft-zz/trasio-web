@@ -43,7 +43,8 @@ ne placená funkce. Každý účet má svou úroveň:
 
 Nový účet začíná na úrovni Start. Vyšší úroveň nastavuje provozovatel
 každému účtu zvlášť. Kolik výletů máš uložených a jakou máš úroveň,
-uvidíš v **Profilu** u položky **Úroveň účtu**.
+uvidíš v **Profilu** v části **Účet**, třeba „Start · 3 z 20 uložených
+výletů“.
 
 Když limitu dosáhneš, nový výlet už neuložíš. Smaž některé staré výlety,
 nebo požádej o vyšší úroveň. Limity se můžou časem změnit.
@@ -54,6 +55,6 @@ nebo požádej o vyšší úroveň. Limity se můžou časem změnit.
 |---|---|
 | **Mapa** | Tvoje výlety, místa a zastávky na mapě. Tady vzniká nový výlet. |
 | **Výlety** | Seznam výletů: Nové, Absolvované, Archiv. |
-| **Místa** | Seznam míst s hodnocením a tvoje navštívená místa. |
+| **Místa** | Seznam míst s hodnocením a tvoje místa: návštěvy, Chci navštívit, návrhy. |
 | **Spojení** | Hledání spojení veřejnou dopravou. |
-| **Profil** | Nastavení, výchozí bod, preferovaný den výletu. |
+| **Profil** | Úroveň účtu, rychlost chůze, oblíbený den výletu, tvoje místa a typy míst na mapě. Otevřeš ho kliknutím na své jméno vlevo dole. |
