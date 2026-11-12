@@ -2,7 +2,7 @@
 title: Podmínky užívání
 description: Pravidla pro používání služby Trasio.
 # TODO: doplnit datum platnosti (validFrom).
-draft: true
+draft: false
 ---
 
 ## 1. Kdo službu provozuje

@@ -2,7 +2,7 @@
 title: Terms of use
 description: Rules for using the Trasio service.
 # TODO: add the valid-from date (validFrom).
-draft: true
+draft: false
 ---
 
 > The Czech version of this document is the binding one.
