@@ -7,6 +7,8 @@ export default defineConfig({
   site: 'https://gotrasio.cz',
   trailingSlash: 'always',
   build: { format: 'directory' },
+  // No syntax colours: code blocks use the design tokens (global.css).
+  markdown: { syntaxHighlight: false },
   i18n: {
     locales,
     defaultLocale,
