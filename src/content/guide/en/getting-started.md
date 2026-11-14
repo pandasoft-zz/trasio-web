@@ -19,6 +19,8 @@ screens, with a translation.
 
 - **Web:** [app.gotrasio.cz](https://app.gotrasio.cz) — works on a computer and on a phone.
 - **Android:** the Android app. It also works without signal.
+- **AI assistant:** the MCP connector for Claude, ChatGPT and others. See
+  [AI assistant (MCP)](../mcp/).
 
 ## Without an account
 

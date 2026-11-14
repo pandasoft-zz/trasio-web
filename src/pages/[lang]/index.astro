@@ -8,6 +8,8 @@ import Watch from '@lucide/astro/icons/watch';
 import ArrowRight from '@lucide/astro/icons/arrow-right';
 import Mountain from '@lucide/astro/icons/mountain';
 import TrainFront from '@lucide/astro/icons/train-front';
+import Bot from '@lucide/astro/icons/bot';
+import MessageCircle from '@lucide/astro/icons/message-circle';
 import Base from '../../layouts/Base.astro';
 import JourneyBar from '../../components/JourneyBar.astro';
 import { APP_URL, langPaths, localePath, useTranslations, type Locale, type UiKey } from '../../i18n/ui';
@@ -31,13 +33,16 @@ const pillars = [
 
 const openProjects = [
   { icon: Mountain, key: 'map', href: 'https://pandasoft-zz.github.io/CzechTouristMap/' },
-  { icon: TrainFront, key: 'motis', href: 'https://github.com/pandasoft-zz/motis-bundles' },
+  { icon: TrainFront, key: 'motis', href: 'https://github.com/motis-project/motis' },
 ] as const;
 
 const planBullets = ['b1', 'b2', 'b3', 'b4', 'b5', 'b6'].map((b) => `home.plan.${b}` as UiKey);
 const placeBullets = ['b1', 'b2', 'b3', 'b4'].map((b) => `home.places.${b}` as UiKey);
 const journeyBullets = ['b1', 'b2', 'b3'].map((b) => `home.journeys.${b}` as UiKey);
 const androidBullets = ['b1', 'b2', 'b3'].map((b) => `home.android.${b}` as UiKey);
+const mcpBullets = ['b1', 'b2', 'b3', 'b4'].map((b) => `home.mcp.${b}` as UiKey);
+const mcpQuestions = ['q1', 'q2', 'q3'].map((q) => `home.mcp.${q}` as UiKey);
+const MCP_URL = 'https://app.gotrasio.cz/mcp';
 const steps = [1, 2, 3, 4] as const;
 ---
 
@@ -191,6 +196,48 @@ const steps = [1, 2, 3, 4] as const;
           ))
         }
       </ol>
+    </div>
+  </section>
+
+  <section class="section feature places" id="ai">
+    <div class="container feature-grid">
+      <div>
+        <span class="eyebrow">{t('home.mcp.badge')}</span>
+        <h2>{t('home.mcp.title')}</h2>
+        <p class="lead">{t('home.mcp.text')}</p>
+        <ul class="checks">
+          {
+            mcpBullets.map((k) => (
+              <li>
+                <Check size={18} aria-hidden="true" />
+                {t(k)}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="card mcp">
+        <p class="mcp-label">
+          <Bot size={20} aria-hidden="true" />
+          {t('home.mcp.examples')}
+        </p>
+        <ul class="mcp-questions">
+          {
+            mcpQuestions.map((k) => (
+              <li>
+                <MessageCircle size={18} aria-hidden="true" />
+                <span>{t(k)}</span>
+              </li>
+            ))
+          }
+        </ul>
+        <p class="mcp-label">{t('home.mcp.connect')}</p>
+        <code class="mcp-url">{MCP_URL}</code>
+        <p class="mcp-clients">{t('home.mcp.clients')}</p>
+        <a class="btn btn-ghost" href={localePath(lang, 'guide/mcp/')}>
+          {t('home.mcp.link')} <ArrowRight size={18} aria-hidden="true" />
+        </a>
+      </div>
     </div>
   </section>
 
@@ -498,6 +545,71 @@ const steps = [1, 2, 3, 4] as const;
     flex: none;
     margin-top: 2px;
     color: var(--color-accent);
+  }
+
+  /* AI assistant (MCP): example questions and the connector address. */
+  .mcp {
+    padding: 28px;
+    display: grid;
+    gap: 14px;
+    justify-items: start;
+  }
+
+  .mcp-label {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  .mcp-label :global(svg) {
+    color: var(--color-primary);
+  }
+
+  .mcp-questions {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 8px;
+    display: grid;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .mcp-questions li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 12px 14px;
+    border-radius: var(--radius-md);
+    background: var(--color-primary-light);
+  }
+
+  .mcp-questions :global(svg) {
+    flex: none;
+    margin-top: 3px;
+    color: var(--color-accent);
+  }
+
+  .mcp-url {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: var(--radius-md);
+    background: var(--color-forest);
+    color: #fff;
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+  }
+
+  .mcp-clients {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
   }
 
   .open {

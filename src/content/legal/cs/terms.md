@@ -1,7 +1,7 @@
 ---
 title: Podmínky užívání
 description: Pravidla pro používání služby Trasio.
-validFrom: "12. 11. 2026"
+validFrom: "14. 11. 2026"
 draft: false
 ---
 
@@ -32,7 +32,8 @@ a údaje o místech pokrývají jen toto území.
   a limity může změnit. Na vyšší úroveň není nárok. Přehled úrovní je
   v [návodu](../../guide/getting-started/).
 - Údaje v účtu musí být pravdivé. Přihlašovací údaje chraň před ostatními.
-- Účet můžeš kdykoli zrušit. Se zrušením účtu smažeme tvoje data podle
+- Účet můžeš kdykoli zrušit v **Profil › Moje data**. Předtím si tam data
+  můžeš stáhnout. Se zrušením účtu smažeme tvoje data podle
   [Zásad ochrany osobních údajů](../privacy/).
 
 ## 4. Jízdní řády a trasy jsou orientační

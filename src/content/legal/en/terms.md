@@ -1,7 +1,7 @@
 ---
 title: Terms of use
 description: Rules for using the Trasio service.
-validFrom: "12 November 2026"
+validFrom: "14 November 2026"
 draft: false
 ---
 
@@ -35,8 +35,9 @@ journeys and place data cover only this area.
   higher level. The levels are listed in the
   [guide](../../guide/getting-started/).
 - Your account details must be true. Keep your sign-in details safe.
-- You can close your account at any time. We then delete your data as the
-  [Privacy policy](../privacy/) says.
+- You can close your account at any time in **Profil › Moje data**
+  (Profile › My data). You can download your data there first. We then
+  delete your data as the [Privacy policy](../privacy/) says.
 
 ## 4. Timetables and routes are a guide only
 

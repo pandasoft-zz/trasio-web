@@ -1,12 +1,12 @@
 ---
 title: Profile and settings
-description: Account level, walking speed, preferred day and places on the map.
+description: Account level, walking speed, preferred day, places on the map, data export and account deletion.
 order: 7
 ---
 
 ![Profile, the Planning part](../../../assets/screens/guide-profile-planning.jpg)
 
-Open the profile with a click on your name at the bottom left. It has four
+Open the profile with a click on your name at the bottom left. It has five
 parts.
 
 ## Účet (Account)
@@ -40,3 +40,33 @@ quick filter.
 
 Tracks that you rejected, or whose trip you deleted. They are not imported
 again until you restore them here.
+
+## Moje data (My data)
+
+![Profile, the My data part: download, upload and account deletion](../../../assets/screens/guide-profile-data.jpg)
+
+Your data are yours. In **Moje data** (My data) you download them, move them
+to another account, or delete the account.
+
+In **Co zahrnout** (What to include) you pick what to download or upload:
+
+- **Výlety** (Trips) — plans, walked and archived trips with their GPS
+  tracks,
+- **Místa** (Places) — private places, your place suggestions and the errors
+  you reported,
+- **Hodnocení a návštěvy** (Ratings and visits) — stars, private notes,
+  visited places and places you want to visit.
+
+**Stáhnout ZIP** (Download ZIP) downloads one ZIP file. Every trip has its own
+folder with GPX files; places and ratings are in GeoJSON. Other apps can open
+them too. The file does not contain your e-mail.
+
+**Vybrat soubor ZIP** (Choose ZIP file) uploads data downloaded from Trasio,
+from this account or another one. Nothing is overwritten or deleted; what
+the account already has is skipped. Uploaded trips are private, and place
+suggestions are not sent again.
+
+**Smazat účet natrvalo** (Delete account forever) deletes the account and
+everything in it: trips, GPS tracks, private places, ratings and visits. Your
+suggestions of public places stay, without your name. To confirm, type
+SMAZAT. It cannot be undone, so download your data first.

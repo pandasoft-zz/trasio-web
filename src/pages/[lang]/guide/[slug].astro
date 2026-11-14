@@ -1,5 +1,7 @@
 ---
 import { render } from 'astro:content';
+import Copy from '@lucide/astro/icons/copy';
+import Check from '@lucide/astro/icons/check';
 import Base from '../../../layouts/Base.astro';
 import { guideIn, splitId } from '../../../i18n/content';
 import { localePath, locales, useTranslations, type Locale } from '../../../i18n/ui';
@@ -46,6 +48,11 @@ const href = (e: { id: string }) => localePath(lang, `guide/${splitId(e.id).slug
       <h1>{entry.data.title}</h1>
       <p class="lead">{entry.data.description}</p>
       <Content />
+      <!-- Icons for the copy buttons that the script below adds to code blocks. -->
+      <template id="copy-icons">
+        <Copy size={16} aria-hidden="true" class="icon-copy" />
+        <Check size={16} aria-hidden="true" class="icon-done" />
+      </template>
       <nav class="pager">
         {prev && <a href={href(prev)}>← {prev.data.title}</a>}
         {next && <a class="next" href={href(next)}>{next.data.title} →</a>}
@@ -53,6 +60,42 @@ const href = (e: { id: string }) => localePath(lang, `guide/${splitId(e.id).slug
     </article>
   </div>
 </Base>
+
+<script is:inline define:vars={{ copyLabel: t('guide.copy'), copiedLabel: t('guide.copied') }}>
+  // Copy button on every code block: copies the code text to the clipboard.
+  const icons = document.getElementById('copy-icons');
+  document.querySelectorAll('.prose pre').forEach((pre) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'copy-btn';
+    button.title = copyLabel;
+    button.setAttribute('aria-label', copyLabel);
+    button.append(icons.content.cloneNode(true));
+    button.addEventListener('click', async () => {
+      try {
+        // Without the last line break, so a pasted command does not run at once.
+        const code = pre.querySelector('code') ?? pre;
+        await navigator.clipboard.writeText(code.textContent.trimEnd());
+      } catch {
+        return;
+      }
+      button.classList.add('done');
+      button.title = copiedLabel;
+      button.setAttribute('aria-label', copiedLabel);
+      setTimeout(() => {
+        button.classList.remove('done');
+        button.title = copyLabel;
+        button.setAttribute('aria-label', copyLabel);
+      }, 2000);
+    });
+    // The button sits in a wrapper, so it stays in the corner when a long
+    // line scrolls sideways.
+    const wrapper = document.createElement('div');
+    wrapper.className = 'code-block';
+    pre.before(wrapper);
+    wrapper.append(pre, button);
+  });
+</script>
 
 <style>
   .layout {

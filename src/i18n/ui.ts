@@ -110,6 +110,22 @@ const cs = {
   'home.android.altWeb': 'Trasio v telefonu: výsledek hledání spojení',
   'home.android.altApp': 'Aplikace pro Android: detail místa',
 
+  'home.mcp.badge': 'Nové · MCP konektor',
+  'home.mcp.title': 'Naplánuj výlet s AI asistentem',
+  'home.mcp.text':
+    'Připoj Trasio do Clauda, ChatGPT nebo jiného AI asistenta. Asistent se přihlásí tvým účtem a pracuje jen s tvými výlety, tvým profilem a s veřejnými místy.',
+  'home.mcp.b1': 'Navrhne a uloží nový plán výletu, i na víc dní. Existující plán změní až po tvém souhlasu.',
+  'home.mcp.b2': 'Najde spojení, i z tvých uložených míst, třeba z chaty.',
+  'home.mcp.b3': 'Prohledá tvoje plány a absolvované výlety: kde už jsi byl a co máš naplánované.',
+  'home.mcp.b4': 'Přidá a opraví místa (POI). Návrh zkontroluje správce, než ho uvidí ostatní.',
+  'home.mcp.examples': 'Zeptej se třeba',
+  'home.mcp.q1': 'Naplánuj mi dvoudenní výlet z Blanska přes Macochu do Sloupu.',
+  'home.mcp.q2': 'Jak se dostanu z chaty do Blanska v sobotu ráno?',
+  'home.mcp.q3': 'Najdi mi výlet u Brna, kde jsem ještě nebyl.',
+  'home.mcp.connect': 'Adresa konektoru',
+  'home.mcp.clients': 'Claude (web, Desktop, Claude Code), ChatGPT, Gemini CLI.',
+  'home.mcp.link': 'Jak konektor připojit',
+
   'home.open.title': 'Postaveno na otevřených datech',
   'home.open.text':
     'Jízdní řády, mapa i výšková data pocházejí z otevřených zdrojů. Celý systém běží na svobodném softwaru. Co jsme pro Trasio postavili sami, dáváme zpátky jako open source, aby to mohl použít i někdo další.',
@@ -117,10 +133,10 @@ const cs = {
   'home.open.map.text':
     'Mapu si Trasio vykresluje samo. Je to turistická a topografická mapa Česka se stínovaným reliéfem, vrstevnicemi po 10 metrech, značenými trasami KČT a cyklotrasami. Vzniká z OpenStreetMap a lidarových výškových dat. Celý postup výroby je open source.',
   'home.open.map.link': 'Czech Tourist Map',
-  'home.open.motis.title': 'Hotový server pro hledání spojení',
+  'home.open.motis.title': 'Spojení počítá otevřený MOTIS',
   'home.open.motis.text':
-    'Spojení hledá MOTIS. Pro něj chystáme balíčky s daty české veřejné dopravy: vlaky, celostátní a regionální autobusy, PID a IDS JMK. Každý týden se sestaví znovu. Stačí jeden příkaz docker run a máš vlastní vyhledávač spojení pro celé Česko. Licence MIT.',
-  'home.open.motis.link': 'motis-bundles',
+    'Spojení hledá MOTIS, svobodný vyhledávač spojení veřejné dopravy. Jízdní řády vlaků, autobusů a MHD z celého Česka a mapová data OpenStreetMap stahujeme každý den znovu. U PID a IDS JMK ukazujeme i polohy vozidel a aktuální zpoždění.',
+  'home.open.motis.link': 'MOTIS',
   'home.open.link': 'Licence a zdroje dat',
 
   'home.cta.title': 'Kam vyrazíš o víkendu?',
@@ -132,6 +148,8 @@ const cs = {
   'guide.back': 'Zpět na návod',
   'guide.prev': 'Předchozí',
   'guide.next': 'Další',
+  'guide.copy': 'Kopírovat',
+  'guide.copied': 'Zkopírováno',
 
   'licenses.title': 'Licence a zdroje dat',
   'licenses.lead':
@@ -249,6 +267,22 @@ const en: Record<UiKey, string> = {
   'home.android.altWeb': 'Trasio on a phone: journey search results',
   'home.android.altApp': 'Android app: place detail',
 
+  'home.mcp.badge': 'New · MCP connector',
+  'home.mcp.title': 'Plan a trip with an AI assistant',
+  'home.mcp.text':
+    'Connect Trasio to Claude, ChatGPT or another AI assistant. The assistant signs in with your account and works only with your trips, your profile and the public places.',
+  'home.mcp.b1': 'It makes and saves a new trip plan, also for many days. It changes an existing plan only after you agree.',
+  'home.mcp.b2': 'It finds journeys, also from your saved places, for example your cottage.',
+  'home.mcp.b3': 'It searches your plans and walked trips: where you have been and what you have planned.',
+  'home.mcp.b4': 'It adds and fixes places (POI). An admin checks the suggestion before others see it.',
+  'home.mcp.examples': 'Ask for example',
+  'home.mcp.q1': 'Plan me a two-day trip from Blansko through Macocha to Sloup.',
+  'home.mcp.q2': 'How do I get from my cottage to Blansko on Saturday morning?',
+  'home.mcp.q3': 'Find me a trip near Brno where I have not been yet.',
+  'home.mcp.connect': 'Connector address',
+  'home.mcp.clients': 'Claude (web, Desktop, Claude Code), ChatGPT, Gemini CLI.',
+  'home.mcp.link': 'How to connect it',
+
   'home.open.title': 'Built on open data',
   'home.open.text':
     'Timetables, the map and elevation data come from open sources. The whole system runs on free software. What we built for Trasio ourselves, we give back as open source, so others can use it too.',
@@ -256,10 +290,10 @@ const en: Record<UiKey, string> = {
   'home.open.map.text':
     'Trasio renders its own map. It is a hiking and topographic map of Czechia with relief shading, contour lines every 10 metres, marked KČT hiking trails and cycling routes. It is made from OpenStreetMap and lidar elevation data. The whole build is open source.',
   'home.open.map.link': 'Czech Tourist Map',
-  'home.open.motis.title': 'A ready-to-run journey planner',
+  'home.open.motis.title': 'Journeys by the open MOTIS planner',
   'home.open.motis.text':
-    'Journeys are found by MOTIS. We build images of it with Czech public transport data: trains, national and regional buses, Prague (PID) and South Moravian (IDS JMK) transport. They are rebuilt every week. One docker run command gives you your own journey planner for all of Czechia. MIT license.',
-  'home.open.motis.link': 'motis-bundles',
+    'Journeys are found by MOTIS, a free public transport journey planner. We download the timetables of trains, buses and city transport in all of Czechia and the OpenStreetMap data again every day. For Prague (PID) and South Moravia (IDS JMK) we also show vehicle positions and live delays.',
+  'home.open.motis.link': 'MOTIS',
   'home.open.link': 'Licenses and data sources',
 
   'home.cta.title': 'Where will you go this weekend?',
@@ -271,6 +305,8 @@ const en: Record<UiKey, string> = {
   'guide.back': 'Back to the guide',
   'guide.prev': 'Previous',
   'guide.next': 'Next',
+  'guide.copy': 'Copy',
+  'guide.copied': 'Copied',
 
   'licenses.title': 'Licenses and data sources',
   'licenses.lead':

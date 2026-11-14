@@ -1,7 +1,7 @@
 ---
 title: Privacy policy
 description: Which personal data Trasio processes and why.
-validFrom: "12 November 2026"
+validFrom: "14 November 2026"
 draft: false
 ---
 
@@ -45,6 +45,12 @@ to you.
 | Cloudflare, Inc. | Website delivery, attack protection | EU / USA (standard contractual clauses) |
 | Seznam.cz, a.s. (Mapy.cz API) | Walking and cycling routes — gets only point coordinates, no data about you | Czechia |
 
+**AI assistant (MCP).** When you connect an AI assistant (for example Claude
+or ChatGPT) to Trasio, Trasio gives it your trips, plans and profile on your
+instruction. The assistant's provider then processes these data under its
+own terms. It is not our processor; you connect and disconnect the connector
+yourself.
+
 ## 5. How long we keep data
 
 The periods below are the longest possible and they are binding. We
@@ -54,12 +60,23 @@ usually delete data sooner.
 - After you close the account we delete data within 30 days at the latest,
   backups within 90 days at the latest.
 - Technical logs: 14 days at the most.
+- Your suggestions of public places stay in the shared place database after
+  you close the account, without your name.
 
 ## 6. Your rights
 
 You have the right to access, correct and delete your data, to restrict
-processing, to data portability (trip export to GPX) and to object. You can
-complain to the [Office for Personal Data Protection](https://uoou.gov.cz/en).
+processing, to data portability and to object. You use access, portability
+and deletion yourself in **Profil › Moje data** (Profile › My data):
+
+- **Stáhnout ZIP** (Download ZIP) — your trips, places, ratings and visits in
+  open formats (GPX, GeoJSON),
+- **Smazat účet natrvalo** (Delete account forever) — deletes the account
+  and all your data.
+
+Send other requests to
+[support@pandasoft.cz](mailto:support@pandasoft.cz). You can complain to the
+[Office for Personal Data Protection](https://uoou.gov.cz/en).
 
 ## 7. Cookies
 
