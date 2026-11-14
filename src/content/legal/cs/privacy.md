@@ -1,7 +1,7 @@
 ---
 title: Ochrana osobních údajů
 description: Jaké osobní údaje Trasio zpracovává a proč.
-validFrom: "12. 11. 2026"
+validFrom: "14. 11. 2026"
 draft: false
 ---
 
@@ -41,6 +41,11 @@ Hledání spojení funguje bez účtu. Zadaná místa k tobě nepřiřazujeme.
 | Cloudflare, Inc. | Doručení webu, ochrana proti útokům | EU / USA (standardní smluvní doložky) |
 | Seznam.cz, a.s. (Mapy.cz API) | Výpočet pěších a cyklo tras — dostává jen souřadnice bodů, ne údaje o tobě | ČR |
 
+**AI asistent (MCP).** Když si do Trasia připojíš AI asistenta (třeba Claude
+nebo ChatGPT), předává mu Trasio na tvůj pokyn tvoje výlety, plány a profil.
+Tyto údaje pak zpracovává poskytovatel asistenta podle svých podmínek. Není
+to náš zpracovatel; konektor připojuješ a odpojuješ sám.
+
 ## 5. Jak dlouho údaje držíme
 
 Lhůty níže jsou nejdelší možné a závazné. Údaje obvykle mažeme dřív.
@@ -49,12 +54,22 @@ Lhůty níže jsou nejdelší možné a závazné. Údaje obvykle mažeme dřív
 - Po zrušení účtu smažeme údaje nejpozději do 30 dní, zálohy nejpozději
   do 90 dní.
 - Technické záznamy: nejvýše 14 dní.
+- Tvoje návrhy veřejných míst zůstanou po zrušení účtu ve sdílené databázi
+  míst, už bez tvého jména.
 
 ## 6. Tvoje práva
 
 Máš právo na přístup k údajům, opravu, výmaz, omezení zpracování,
-přenositelnost (export výletů do GPX) a právo vznést námitku. Stížnost
-můžeš podat u [Úřadu pro ochranu osobních údajů](https://uoou.gov.cz).
+přenositelnost a právo vznést námitku. Přístup, přenositelnost a výmaz
+uplatníš sám v **Profil › Moje data**:
+
+- **Stáhnout ZIP** — tvoje výlety, místa, hodnocení a návštěvy v otevřených
+  formátech (GPX, GeoJSON),
+- **Smazat účet natrvalo** — smaže účet a všechny tvoje údaje.
+
+Ostatní žádosti posílej na
+[support@pandasoft.cz](mailto:support@pandasoft.cz). Stížnost můžeš podat
+u [Úřadu pro ochranu osobních údajů](https://uoou.gov.cz).
 
 ## 7. Cookies
 
