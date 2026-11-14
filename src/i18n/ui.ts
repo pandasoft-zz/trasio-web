@@ -148,6 +148,8 @@ const cs = {
   'guide.back': 'Zpět na návod',
   'guide.prev': 'Předchozí',
   'guide.next': 'Další',
+  'guide.copy': 'Kopírovat',
+  'guide.copied': 'Zkopírováno',
 
   'licenses.title': 'Licence a zdroje dat',
   'licenses.lead':
@@ -303,6 +305,8 @@ const en: Record<UiKey, string> = {
   'guide.back': 'Back to the guide',
   'guide.prev': 'Previous',
   'guide.next': 'Next',
+  'guide.copy': 'Copy',
+  'guide.copied': 'Copied',
 
   'licenses.title': 'Licenses and data sources',
   'licenses.lead':

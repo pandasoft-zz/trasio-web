@@ -264,7 +264,7 @@ img {
 
 .prose pre {
   margin: 0 0 1em;
-  padding: 14px 16px;
+  padding: 14px 52px 14px 16px;
   border-radius: var(--radius-md);
   background: var(--color-forest);
   color: #fff;
@@ -278,6 +278,49 @@ img {
   padding: 0;
   font-size: 0.9rem;
   color: inherit;
+}
+
+/* Copy button in the top right corner of a code block (guide page script). */
+.prose .code-block {
+  position: relative;
+  margin: 0 0 1em;
+}
+
+.prose .code-block pre {
+  margin: 0;
+}
+
+.prose .copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--color-forest-active);
+  border-radius: var(--radius-sm);
+  background: var(--color-forest);
+  color: var(--color-forest-text);
+  cursor: pointer;
+}
+
+.prose .copy-btn:hover,
+.prose .copy-btn:focus-visible {
+  background: var(--color-forest-active);
+  color: #fff;
+}
+
+.prose .copy-btn .icon-done,
+.prose .copy-btn.done .icon-copy {
+  display: none;
+}
+
+.prose .copy-btn.done .icon-done {
+  display: inline;
+  color: var(--color-accent);
 }
 
 .prose blockquote {
