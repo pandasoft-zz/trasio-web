@@ -1,7 +1,7 @@
 ---
 title: Android app
 description: Trasio on your phone, also without signal.
-order: 7
+order: 8
 ---
 
 ![Android app: place detail](../../../assets/screens/design-android-place.png)
@@ -23,7 +23,7 @@ signal, with hiking routes, relief and contour lines.
 
 ## On the trip
 
-- **Start trip** and **Finish trip**, as on the web.
+- **Start trip** and **Finish trip** — only in the app, the web does not have these buttons.
 - **Track recording** with the phone GPS.
 - Import of older tracks from Samsung Health.
 

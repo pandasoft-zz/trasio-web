@@ -1,8 +1,8 @@
 ---
 title: Privacy policy
 description: Which personal data Trasio processes and why.
-# TODO: add the valid-from date (validFrom).
-draft: true
+validFrom: "12 November 2026"
+draft: false
 ---
 
 > The Czech version of this document is the binding one.
@@ -12,7 +12,8 @@ draft: true
 The controller of personal data is the operator of the service, a private
 person.
 
-<!-- TODO: add the controller's first and last name and contact e-mail. -->
+Controller: **Martin Vídeňský**, contact:
+[support@pandasoft.cz](mailto:support@pandasoft.cz).
 
 ## 2. Which data we process
 
@@ -22,7 +23,7 @@ person.
 | Plans, trips, points, notes, tags | Service features | Contract |
 | Track records (GPX, KML), trip date | Trip archive, statistics | Contract |
 | Visited places, ratings, notes on places | Service features | Contract |
-| Home point, profile settings | Prefilled search | Contract |
+| Saved places (My places), profile settings | Prefilled search | Contract |
 | Technical logs (IP address, time, errors) | Operation and security | Legitimate interest |
 
 Journey search works without an account. We do not link the searched places
@@ -38,21 +39,21 @@ to you.
 
 ## 4. Who processes data for us
 
-<!-- TODO: add the server and e-mail providers and the country where they process data. -->
-
 | Processor | Purpose | Where |
 |---|---|---|
+| Contabo GmbH | Server, database and e-mail of the service | EU |
 | Cloudflare, Inc. | Website delivery, attack protection | EU / USA (standard contractual clauses) |
 | Seznam.cz, a.s. (Mapy.cz API) | Walking and cycling routes — gets only point coordinates, no data about you | Czechia |
 
 ## 5. How long we keep data
 
-- Account data and content: while the account exists.
-- After you close the account we delete data within 30 days, backups
-  within 90 days.
-- Technical logs: 14 days.
+The periods below are the longest possible and they are binding. We
+usually delete data sooner.
 
-<!-- TODO: check the deletion periods against the real setup. -->
+- Account data and content: while the account exists.
+- After you close the account we delete data within 30 days at the latest,
+  backups within 90 days at the latest.
+- Technical logs: 14 days at the most.
 
 ## 6. Your rights
 

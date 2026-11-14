@@ -27,7 +27,7 @@ and `src/content/*/cs/`.
   site has no cookies — keep it true.
 - Images go to `src/assets/` and are shown with `astro:assets` (`Image`),
   so Astro makes WebP in several sizes.
-- Legal texts are drafts (`draft: true`) until a lawyer checks them.
+- Legal texts are valid since `validFrom`. Use `draft: true` only for a text that is not valid yet.
 - Use a mature library instead of own code.
 - No component versions in docs.
 

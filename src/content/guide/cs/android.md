@@ -1,7 +1,7 @@
 ---
 title: Aplikace pro Android
 description: Trasio v telefonu, i bez signálu.
-order: 7
+order: 8
 ---
 
 ![Aplikace pro Android: detail místa](../../../assets/screens/design-android-place.png)
@@ -22,7 +22,7 @@ včetně turistických tras, reliéfu a vrstevnic.
 
 ## Na výletě
 
-- **Začít výlet** a **Dokončit výlet** jako na webu.
+- **Začít výlet** a **Dokončit výlet** — jen v aplikaci, na webu tato tlačítka nejsou.
 - **Záznam trasy** přes GPS telefonu.
 - Import starších záznamů ze Samsung Health.
 

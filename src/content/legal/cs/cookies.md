@@ -1,8 +1,8 @@
 ---
 title: Cookies
 description: Jaké cookies a úložiště používá web a aplikace Trasio.
-# TODO: doplnit datum platnosti (validFrom).
-draft: true
+validFrom: "12. 11. 2026"
+draft: false
 ---
 
 ## Tento web (gotrasio.cz)
@@ -16,11 +16,12 @@ Aplikace používá jen technicky nutná úložiště:
 
 | Název | Typ | Účel | Doba |
 |---|---|---|---|
-| Přihlášení (Zitadel) | cookie | Přihlášení k účtu | po dobu relace |
-| Tokeny přihlášení | úložiště prohlížeče | Udržení přihlášení | do odhlášení |
-| Nastavení mapy | úložiště prohlížeče | Poslední výřez, vrstvy, filtr | trvale v prohlížeči |
+| Přihlašovací služba (Zitadel): `__Host-zitadel.useragent`, `fingerprintId` | cookie na auth.gotrasio.cz | Rozpoznání prohlížeče při přihlášení, ochrana účtu | 1 rok |
+| Stav přihlašování (`oidc.…`) | úložiště prohlížeče (localStorage) | Dokončení přihlášení | smaže se po přihlášení |
+| Přihlášení (`oidc.user…`) | úložiště relace (sessionStorage) | Udržení přihlášení | do odhlášení nebo zavření karty |
+| Nastavení mapy (`trasio.map`) | úložiště prohlížeče (localStorage) | Poslední výřez, vrstvy, filtr | trvale v prohlížeči |
+| Jazyk (`i18nextLng`) | úložiště prohlížeče (localStorage) | Jazyk aplikace | trvale v prohlížeči |
+| Rozpracovaný plán, výběr výletů | úložiště relace (sessionStorage) | Neuložené změny plánu, výběr v seznamu výletů | do zavření karty |
 
 Nutná úložiště nevyžadují souhlas. Reklamní ani sledovací cookies
 nepoužíváme.
-
-<!-- TODO: ověřit dobu platnosti cookie Zitadel a úplný seznam úložišť podle aplikace. -->

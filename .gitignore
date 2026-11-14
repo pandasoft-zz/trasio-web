@@ -5,3 +5,6 @@ dist/
 .env
 .dev.vars
 preview/
+
+# Playwright MCP output (screenshots, snapshots)
+.playwright-mcp/
