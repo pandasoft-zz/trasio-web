@@ -1,7 +1,7 @@
 ---
 title: Aplikace pro Android
 description: Trasio v telefonu, i bez signálu.
-order: 8
+order: 9
 ---
 
 ![Aplikace pro Android: detail místa](../../../assets/screens/design-android-place.png)

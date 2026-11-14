@@ -4,7 +4,7 @@ description: Jak najít spojení s rozumnou pěší docházkou.
 order: 4
 ---
 
-![Spojení z Brna na hrad Pernštejn: vlak bez přestupu a pěší docházka](../../../assets/screens/guide-connections.jpg)
+![Spojení z Brna na hrad Pernštejn: vlakem přes Tišnov a pěšky z Nedvědice](../../../assets/screens/guide-connections.jpg)
 
 ## Zadání
 
@@ -39,8 +39,18 @@ V Upřesnit vyhledávání nastavíš také:
 ## Výsledky
 
 Každé spojení ukazuje čas odjezdu a příjezdu, linky, počet přestupů a kolik
-půjdeš pěšky. Po rozbalení vidíš všechny úseky: pěší úseky, nástup, výstup,
-počet mezizastávek a upozornění na těsný přestup. Trasa spojení je zároveň
-v mapě.
+půjdeš pěšky. Vlevo je odpočet, **za kolik minut** spoj jede. Po rozbalení
+vidíš všechny úseky: pěší úseky, nástup, výstup, počet mezizastávek a
+upozornění na těsný přestup. Trasa spojení je zároveň v mapě.
+
+## Zpoždění
+
+U spojů PID (Praha a Středočeský kraj) a IDS JMK (Jihomoravský kraj) Trasio
+ukazuje **aktuální zpoždění**: posunutý čas odjezdu a příjezdu a štítek
+se zpožděním. Když aktuální údaj není, ukáže obvyklé zpoždění daného spoje,
+nebo jen čas podle jízdního řádu.
+
+Kde jsou vozidla teď a jak jedou zastávky, popisuje kapitola
+[Mapa](../map/).
 
 > Tip: U každého místa v mapě je tlačítko **Spojení sem**. Vyplní cíl za tebe.

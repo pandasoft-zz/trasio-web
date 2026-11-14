@@ -70,8 +70,8 @@ export const data: LicenseItem[] = [
     name: 'PID, IDS JMK',
     url: 'https://data.pid.cz/',
     use: {
-      cs: 'Jízdní řády integrovaných systémů Praha a Jihomoravský kraj.',
-      en: 'Timetables of the Prague and South Moravian integrated systems.',
+      cs: 'Jízdní řády, polohy vozidel a zpoždění integrovaných systémů Praha a Jihomoravský kraj.',
+      en: 'Timetables, vehicle positions and delays of the Prague and South Moravian integrated systems.',
     },
     // TODO: verify the license of the PID and IDS JMK data.
     license: '—',
@@ -117,15 +117,6 @@ export const software: LicenseItem[] = [
     name: 'MOTIS',
     url: 'https://github.com/motis-project/motis',
     use: { cs: 'Vyhledávání spojení veřejné dopravy.', en: 'Public transport journey search.' },
-    license: 'MIT',
-  },
-  {
-    name: 'motis-bundles',
-    url: 'https://github.com/pandasoft-zz/motis-bundles',
-    use: {
-      cs: 'Naše hotové obrazy MOTIS s daty české veřejné dopravy.',
-      en: 'Our ready-to-run MOTIS images with Czech public transport data.',
-    },
     license: 'MIT',
   },
   {

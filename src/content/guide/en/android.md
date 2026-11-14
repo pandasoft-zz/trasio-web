@@ -1,7 +1,7 @@
 ---
 title: Android app
 description: Trasio on your phone, also without signal.
-order: 8
+order: 9
 ---
 
 ![Android app: place detail](../../../assets/screens/design-android-place.png)

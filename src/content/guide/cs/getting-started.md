@@ -16,6 +16,8 @@ nenaplánuješ.
 
 - **Web:** [app.gotrasio.cz](https://app.gotrasio.cz) — funguje v počítači i v mobilu.
 - **Android:** aplikace pro Android. Funguje i bez signálu.
+- **AI asistent:** MCP konektor pro Claude, ChatGPT a další. Viz
+  [AI asistent (MCP)](../mcp/).
 
 ## Co jde bez přihlášení
 
