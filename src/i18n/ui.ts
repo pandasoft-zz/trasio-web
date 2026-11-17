@@ -161,9 +161,15 @@ const cs = {
   'licenses.use': 'K čemu',
   'licenses.license': 'Licence',
 
-  'legal.draft':
-    'Návrh textu. Před spuštěním ho musí zkontrolovat právník.',
-  'legal.updated': 'Platné od',
+  'legal.draft': 'Návrh nové verze. Zatím neplatí.',
+  'legal.validFrom': 'Platné od',
+  'legal.changes': 'Co se mění oproti předchozí verzi',
+  'legal.versions': 'Všechny verze',
+  'legal.current': 'platná',
+  'legal.upcoming': 'návrh',
+  'legal.old': 'Tato verze už neplatí.',
+  'legal.toCurrent': 'Platné znění',
+  'legal.permalink': 'Trvalý odkaz na tuto verzi',
 
   'notFound.title': 'Stránka nenalezena',
   'notFound.text': 'Tahle cesta nikam nevede. Zkus to z úvodní stránky.',
@@ -318,9 +324,15 @@ const en: Record<UiKey, string> = {
   'licenses.use': 'Used for',
   'licenses.license': 'License',
 
-  'legal.draft':
-    'Draft text. A lawyer must check it before launch.',
-  'legal.updated': 'Valid from',
+  'legal.draft': 'Draft of a new version. Not valid yet.',
+  'legal.validFrom': 'Valid from',
+  'legal.changes': 'What changed against the version before',
+  'legal.versions': 'All versions',
+  'legal.current': 'valid',
+  'legal.upcoming': 'draft',
+  'legal.old': 'This version is no longer valid.',
+  'legal.toCurrent': 'Valid text',
+  'legal.permalink': 'Permanent link to this version',
 
   'notFound.title': 'Page not found',
   'notFound.text': 'This path leads nowhere. Try the home page.',

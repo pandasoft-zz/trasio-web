@@ -15,13 +15,26 @@ adds a translation in brackets, because the app is Czech only for now.
 
 ## Legal pages
 
-`src/content/legal/<lang>/{terms,privacy,cookies}.md`. Front matter:
-`title`, `description`, `validFrom`, `draft`. A draft shows a warning box.
-`validFrom` is shown as written, so write it in the page language
-(`12. 11. 2026`, `12 November 2026`). Without `validFrom` the page shows no
-date. What is still open is marked with `TODO` comments (`<!-- TODO: … -->` in Markdown,
-`# TODO` in front matter), never in the visible text. The Czech text is the
-binding one.
+Every version of a legal text is its own file and its own page
+([ADR 002](decisions/002-versioned-legal-texts.md)):
+
+- File: `src/content/legal/<lang>/<doc>/<valid-from>.md` (`doc` is `terms`,
+  `privacy` or `cookies`). Front matter: `title`, `description`, `validFrom`
+  (the same day as the file name), `draft`, `changes` (a short list of what
+  is new against the version before; for the first version "První
+  zveřejněná verze.").
+- `/<lang>/legal/<doc>/` shows the newest published version;
+  `/<lang>/legal/<doc>/<valid-from>/` shows one version for good. Every
+  page lists all versions.
+- A published version (`draft: false` on `main`) never changes. Every
+  change, also a typo, is a new file. A draft may change and may be renamed
+  to its real date until it is published. `npm run check` checks this.
+- Links inside the text are absolute (`/cs/legal/privacy/`).
+- What is still open is marked with `TODO` comments (`<!-- TODO: … -->` in
+  Markdown), never in the visible text. The Czech text is the binding one.
+- After new terms of use are published, the operator registers the
+  permanent address of the version in the app admin, and every user accepts
+  it again.
 
 ## Licenses
 

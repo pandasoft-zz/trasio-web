@@ -1,0 +1,126 @@
+---
+import { render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { currentOf, formatDay, legalId, type LegalEntry } from '../i18n/legal';
+import { localePath, useTranslations, type Locale } from '../i18n/ui';
+
+interface Props {
+  lang: Locale;
+  /** The version shown. */
+  entry: LegalEntry;
+  /** Every version of the same text, newest first. */
+  versions: LegalEntry[];
+}
+
+const { lang, entry, versions } = Astro.props;
+const t = useTranslations(lang);
+const { Content } = await render(entry);
+const { doc, version } = legalId(entry);
+const current = currentOf(versions);
+const isCurrent = current.id === entry.id;
+const versionPath = (v: LegalEntry) => localePath(lang, `legal/${doc}/${legalId(v).version}/`);
+const currentPath = localePath(lang, `legal/${doc}/`);
+// Older versions than the valid one are no longer valid; a draft is not yet.
+const isOld = !entry.data.draft && !isCurrent;
+---
+
+<Base lang={lang} title={`${entry.data.title} · Trasio`} description={entry.data.description}>
+  <div class="container page-head">
+    <h1>{entry.data.title}</h1>
+    <p class="meta">
+      {t('legal.validFrom')}: {formatDay(entry.data.validFrom, lang)}{' · '}<a href={localePath(lang, `legal/${doc}/${version}/`)}>{t('legal.permalink')}</a>
+    </p>
+  </div>
+  <div class="container body">
+    {entry.data.draft && <p class="notice" role="note">{t('legal.draft')}</p>}
+    {
+      isOld && (
+        <p class="notice" role="note">
+          {t('legal.old')} <a href={currentPath}>{t('legal.toCurrent')}</a>
+        </p>
+      )
+    }
+    <section class="changes" aria-labelledby="changes-title">
+      <h2 id="changes-title">{t('legal.changes')}</h2>
+      <ul>
+        {entry.data.changes.map((c) => <li>{c}</li>)}
+      </ul>
+    </section>
+    <article class="prose">
+      <Content />
+    </article>
+    <nav class="versions" aria-labelledby="versions-title">
+      <h2 id="versions-title">{t('legal.versions')}</h2>
+      <ul>
+        {
+          versions.map((v) => (
+            <li>
+              {v.id === entry.id ? (
+                <b>{formatDay(v.data.validFrom, lang)}</b>
+              ) : (
+                <a href={versionPath(v)}>{formatDay(v.data.validFrom, lang)}</a>
+              )}
+              {v.id === current.id && !v.data.draft && <span class="tag">{t('legal.current')}</span>}
+              {v.data.draft && <span class="tag draft">{t('legal.upcoming')}</span>}
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</Base>
+
+<style>
+  .meta {
+    color: var(--color-muted);
+  }
+
+  .body {
+    padding-bottom: 96px;
+  }
+
+  .notice {
+    max-width: 72ch;
+  }
+
+  .changes {
+    max-width: 72ch;
+    background: var(--color-primary-light);
+    border-radius: var(--radius-md);
+    padding: 14px 18px;
+    margin-bottom: 32px;
+  }
+
+  .changes h2,
+  .versions h2 {
+    font-size: 1.05rem;
+    margin: 0 0 8px;
+  }
+
+  .changes ul,
+  .versions ul {
+    margin: 0;
+    padding-left: 1.3em;
+  }
+
+  .versions {
+    max-width: 72ch;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .tag {
+    margin-left: 8px;
+    padding: 1px 8px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+  }
+
+  .tag.draft {
+    background: var(--color-accent-light);
+    color: var(--color-accent-dark);
+  }
+</style>

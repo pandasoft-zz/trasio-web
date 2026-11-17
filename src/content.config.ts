@@ -13,14 +13,18 @@ const guide = defineCollection({
   }),
 });
 
-// Legal pages: src/content/legal/<lang>/<slug>.md.
+// Legal texts: src/content/legal/<lang>/<doc>/<valid-from>.md, one file per
+// version (ADR 002). A published version never changes; a change is a new
+// file. `changes` says in a few points what is new against the version
+// before.
 const legal = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/legal' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    validFrom: z.string().optional(),
+    validFrom: z.coerce.date(),
     draft: z.boolean().default(false),
+    changes: z.array(z.string()).min(1),
   }),
 });
 
