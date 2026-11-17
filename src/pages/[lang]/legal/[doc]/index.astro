@@ -1,0 +1,23 @@
+---
+// The valid text of a legal document: /<lang>/legal/<doc>/. It shows the
+// newest published version; every version also has its own permanent page
+// (ADR 002).
+import LegalPage from '../../../../components/LegalPage.astro';
+import { currentOf, legalDocsIn } from '../../../../i18n/legal';
+import { locales, type Locale } from '../../../../i18n/ui';
+
+export async function getStaticPaths() {
+  const paths = [];
+  for (const lang of locales as Locale[]) {
+    for (const [doc, versions] of await legalDocsIn(lang)) {
+      paths.push({ params: { lang, doc }, props: { versions } });
+    }
+  }
+  return paths;
+}
+
+const lang = Astro.params.lang as Locale;
+const { versions } = Astro.props;
+---
+
+<LegalPage lang={lang} entry={currentOf(versions)} versions={versions} />

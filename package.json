@@ -6,8 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check",
-    "deploy": "astro build && wrangler deploy"
+    "check": "astro check && node scripts/check-legal.mjs",
+    "deploy": "astro build && wrangler deploy",
+    "check:legal": "node scripts/check-legal.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
